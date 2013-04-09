@@ -1,0 +1,64 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2012-10-26 15:46+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: /home/rudra/MKBIB/help/C/mkbib-manual.xml:14(title)
+msgid "My GNOME App Manual"
+msgstr ""
+
+#: /home/rudra/MKBIB/help/C/mkbib-manual.xml:16(para)
+msgid "My GNOME App is a program that ..."
+msgstr ""
+
+#: /home/rudra/MKBIB/help/C/mkbib-manual.xml:19(year)
+msgid "2006"
+msgstr ""
+
+#: /home/rudra/MKBIB/help/C/mkbib-manual.xml:20(holder)
+msgid "Brent Smith"
+msgstr ""
+
+#: /home/rudra/MKBIB/help/C/mkbib-manual.xml:23(publishername) /home/rudra/MKBIB/help/C/mkbib-manual.xml:31(orgname)
+msgid "GNOME Documentation Project"
+msgstr ""
+
+#: /home/rudra/MKBIB/help/C/mkbib-manual.xml:29(firstname)
+msgid "Brent"
+msgstr ""
+
+#: /home/rudra/MKBIB/help/C/mkbib-manual.xml:30(surname)
+msgid "Smith"
+msgstr ""
+
+#: /home/rudra/MKBIB/help/C/mkbib-manual.xml:37(revnumber)
+msgid "My GNOME App Manual 1.0"
+msgstr ""
+
+#: /home/rudra/MKBIB/help/C/mkbib-manual.xml:38(date)
+msgid "2006-02-04"
+msgstr ""
+
+#: /home/rudra/MKBIB/help/C/mkbib-manual.xml:42(releaseinfo)
+msgid "This manual describes version 1.0 of My GNOME App"
+msgstr ""
+
+#: /home/rudra/MKBIB/help/C/mkbib-manual.xml:45(title)
+msgid "Introduction"
+msgstr ""
+
+#: /home/rudra/MKBIB/help/C/mkbib-manual.xml:46(para)
+msgid "Foo"
+msgstr ""
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
+#: /home/rudra/MKBIB/help/C/mkbib-manual.xml:0(None)
+msgid "translator-credits"
+msgstr ""
+

@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+"http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+<!ENTITY appname "mkBiB">
+<!ENTITY app "<application>mkBiB</application>">
+<!ENTITY appversion "2.0">
+<!ENTITY manrevision "2.0">
+<!ENTITY date "February 2013">
+]>
+<article id="index" lang="en">
+  <articleinfo>
+    <title>&appname; Manual</title>
+    <abstract role="description">
+      <para>&app; is a program for for creating bibtex file.</para>
+    </abstract>
+    <copyright>
+      <year>2012-2013</year>
+      <holder>Rudra Banerjee</holder>
+    </copyright>
+    <author role="maintainer">
+      <firstname>Rudra</firstname>
+      <surname>Banerjee</surname>
+      <affiliation>
+	<orgname></orgname>
+	<address>
+	  <email>bnrj.rudra@yahoo.com</email>
+	</address>
+      </affiliation>
+    </author>
+    <revhistory>
+      <revision>
+	<revnumber>&appname; Manual &manrevision;</revnumber>
+	<date>3-2-2013</date>
+      </revision>
+    </revhistory>
+    <releaseinfo>
+      Version &manrevision; documenting &appname; version &appversion;.
+    </releaseinfo>
+
+    <legalnotice>
+      <title>Copyright</title>
+      <para>Copyright (C)  2012-2013  Rudra Banerjee.</para>
+      <para>Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A copy of the license is included in the section entitled "GNU Free Documentation License".</para>
+    </legalnotice>
+  </articleinfo>
+  <sect1 id="introduction"><title>Introduction</title>
+    <mediaobject>
+      <imageobject>
+	<imagedata fileref="images/mkbib.png"/>
+      </imageobject>
+    </mediaobject>
+    <para>
+      <literallayout> &app; is a BibTeX manager.
+	User can creat, manage and edit a new or existing bibtex file.
+	User can enter each field separately or an complete entry.
+      </literallayout>
+    </para>
+  </sect1>
+  <sect1 id="scope"><title>Scopes</title>
+    <sect2 id="Features"><title>Features</title>
+      <itemizedlist>
+	<listitem><para>Gives user a simple gui to generate and edit bibtex file.</para>
+	</listitem>
+	<listitem><para>Enable user to search google scholar from the same interface<lineannotation>(Search in google scholar webpage, not withstanding their terms of usage,in my knowledge)</lineannotation>.</para>
+	</listitem>
+	<!-- <listitem><para>Creates bibliography section in tex format.</para>
+	  <warning><title>Warning</title>
+	    <para>All 361 bibliographystyle packages, that are distributed with texlive-2012, are included to make the creation easy. Use with caution.</para>
+	  </warning>
+	</listitem>-->
+	<listitem>Include a complete bibtex entry.
+	</listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="limitations"><title>Limitations</title>
+      <para>Bibtex accepts many types of formatting. Currently only
+	<programlisting>
+	  @type{key,
+	  key0="value",
+	  key1="value1"
+	  }</programlisting>
+	type format is supported. </para>
+      <para>
+	A major drawback of the program in its current state is, it can not handel latex commands either, i.e. formatting like \textbf{Author's Name} can not be reproduced.</para>
+      <para>key={value} and more complex format will be supported very soon.</para>
+    </sect2>
+  </sect1>
+  <sect1 id="Installation"><title>Installation</title>
+    <para>Installation from source code should be done using standard autotools.
+      Check INSTALL for more details.</para>
+    <sect2 id="requirements"><title>Requirements</title>
+      <para>Installation requires following packages:</para>
+      <itemizedlist>
+	<listitem><para>GTK+-3</para>
+	</listitem>
+	<listitem><para>libsoup</para>
+	</listitem>
+	<listitem><para>gnome-doc-utils</para>
+	</listitem>
+      </itemizedlist>
+    </sect2>
+    <sect2 id="distros"><title>Distro specific Example</title>
+      <sect3 id="fedora"><title>Packages required in Fedora(18)</title>
+	<para> You would run the command:
+	  <command> sudo yum install gtk3-devel libsoup-devel gnome-doc-utils rarian-compat</command>
+	</para>	
+      </sect3>
+    </sect2>
+  </sect1>
+  <sect1 id="usage"><title>Usage</title>
+    <sect2 id="new"><title>Create New Entry</title>
+      <para>User can either edit a New file(<menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>N</keycap></keycombo></shortcut><guimenu>File</guimenu><guimenuitem>New</guimenuitem></menuchoice>)
+	, or edit an old file(<menuchoice><shortcut><keycombo><keycap>Ctrl</keycap><keycap>O</keycap></keycombo></shortcut><guimenu>File</guimenu><guimenuitem>Open</guimenuitem></menuchoice>) to enter new bibtex entry. Process is straight forward: 
+	Choose a file → Enter bibtex specification → Create!</para>
+    </sect2>
+    <sect2 id="put Entry"><title>Input a complete Entry</title>
+      <para>A complete bibtex entry can be inserted using (<menuchoice><shortcut><keycombo><keycap>Alt</keycap><keycap>E</keycap></keycombo></shortcut><guimenu>Edit</guimenu><guimenuitem>Edit</guimenuitem></menuchoice>).</para>
+
+    </sect2>
+    <sect2 id="web"><title>Search Google Scholar</title>
+      <para>You can also search google scholar from the same interface. Enter Author, Title and year(optional) and enter google search scholar button.</para>
+      <tip><title>Tip</title>
+	<itemizedlist>
+	  <listitem><para>Use Title box as keyword, and Author as author(s) name. Year is optional. </para>
+	  </listitem>
+	  <listitem><para>You can do  better by turning bibtex link in google scholar setting "on"</para>
+	  </listitem>
+	</itemizedlist>
+      </tip>
+    </sect2>
+    <!--	<sect2 id="tex"><title>Create tex file</title>
+      <para>Once a bibtex file is created, user can choose to create a tex file using it. If user chooses any
+	entry from the drop-down box,say A at the right, a texfile named A.tex, using “nocite” will be created.</para>
+    </sect2>-->
+  </sect1>
+  <sect1 id="more"><title>Resources</title>
+    <itemizedlist>
+      <listitem><ulink url="http://bibtex.org">BibTex</ulink><para>Here you will find everything you need to know about BibTeX, or such the website clames.</para></listitem>
+      <listitem><ulink url="http://www.cs.stir.ac.uk/~kjt/software/latex/showbst.html">Ken Turnet's page on BibTex</ulink><para>A example most of most used bibtex style's output. Very Helpful.</para></listitem>
+    </itemizedlist>
+  </sect1>
+</article>

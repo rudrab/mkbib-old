@@ -17,6 +17,7 @@
 #    along with mkBIB.  If not, see <http://www.gnu.org/licenses/>.
 #
 #
+BUILT_SOURCES = bib.h
 SUBDIRS=help
 pixmapdir=$(datadir)/images
 pixmap_DATA =  images/ast_bib1.png   images/ast_gog.png \
@@ -26,11 +27,13 @@ pixmap_DATA =  images/ast_bib1.png   images/ast_gog.png \
 AM_CFLAGS = @GTK_CFLAGS@ @LIBSOUP_CFLAGS@
 AM_CPPFLAGS= -DPIXMAP=\"$(datadir)/images\"
 bin_PROGRAMS = mkbib
-mkbib_SOURCES = src/caution.c src/search.c \
+mkbib_SOURCES = src/bib.y src/scan.l src/caution.c src/search.c \
 		src/help.c  src/mkbib.c  src/update_file.c \
 		src/biblst src/main.h src/view.c src/file_util.c
-mkbib_LDADD = @GTK_LIBS@ @LIBSOUP_LIBS@
-EXTRA_DIST=$(pixmap_DATA) gnome-doc-utils.make 
-CLEANFILES = *~
+AM_YFLAGS = -d
+AM_LFLAGS = -i
+mkbib_LDADD = @GTK_LIBS@ @LIBSOUP_LIBS@ @LEXLIB@
+EXTRA_DIST=$(pixmap_DATA) gnome-doc-utils.make m4 
+CLEANFILES = src/bib.c src/bib.h *~
 #DISTCLEANFILES=gnome-doc-utils.make
 DISTCHECK_CONFIGURE_FLAGS=--disable-scrollkeeper

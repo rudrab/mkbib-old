@@ -101,18 +101,18 @@ void gs_open(GtkWidget *window, gpointer data) {
   gtk_text_buffer_get_end_iter (gs_buf, &end);
   gchar *gs_text = gtk_text_buffer_get_text (gs_buf, &start, &end, FALSE); 
   //  g_print(gs_text);
-  GScanner* gs_scan = g_scanner_new (NULL);
-  g_scanner_input_text (gs_scan, gs_text, gs_BUFF);
+//  GScanner* gs_scan = g_scanner_new (NULL);
+//  g_scanner_input_text (gs_scan, gs_text, gs_BUFF);
 
-  gs_table = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_free);
-  do {
-    g_hash_table_remove_all (gs_table);
-    parse_entry (gs_scan, gs_table);
-    output_entry (gs_table);
-    g_scanner_peek_next_token (gs_scan);
-  }
-  while (gs_scan->next_token != G_TOKEN_EOF &&
-      gs_scan->next_token != G_TOKEN_ERROR);
+//  gs_table = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_free);
+//  do {
+//    g_hash_table_remove_all (gs_table);
+//    parse_entry (gs_scan, gs_table);
+     output_entry (gs_text);
+//    g_scanner_peek_next_token (gs_scan);
+//  }
+//  while (gs_scan->next_token != G_TOKEN_EOF &&
+//      gs_scan->next_token != G_TOKEN_ERROR);
 
   gs_tree = gtk_tree_view_new_with_model (GTK_TREE_MODEL (store));
   for (valid = gtk_tree_model_get_iter_first (GTK_TREE_MODEL (store), &siter);

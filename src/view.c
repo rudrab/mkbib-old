@@ -31,37 +31,8 @@ GtkTreeIter siter;
 #define slen 1064
 
 void activate_func(GtkWidget *widget, gpointer data);
-//void open_file(GtkWidget *widget, gpointer data, char buffer, gsize length);
 
-void output_entry (GHashTable *table)
-{
-  GHashTableIter iter;
-  char *key, *val;
-  char *keys[] = {"id", "type", "author", "year", "title", "publisher", "editor", 
-    "volume", "number", "pages", "month", "note", "address", "edition", "journal",
-    "series", "book", "chapter", "organization", NULL};
-  char *vals[] = {NULL,  NULL,  NULL, NULL, NULL,
-    NULL,  NULL,  NULL, NULL, NULL,
-    NULL,  NULL,  NULL, NULL, NULL,
-    NULL,	 NULL,  NULL, NULL, NULL};
-
-  char **kiter;
-  int i;
-
-  g_hash_table_iter_init (&iter, table);
-  while (g_hash_table_iter_next (&iter, (void **)&key, (void **)&val))
-  {
-    for (kiter = keys, i = 0; *kiter; kiter++, i++)
-    {
-      if (!g_ascii_strcasecmp(*kiter, key))
-      {
-	vals[i] = g_strndup(val,slen);
-	break;
-      }
-    }
-  }
-
-  gtk_list_store_append (store, &siter);
+/*  gtk_list_store_append (store, &siter);
   gtk_list_store_set (store, &siter,
       COL_BIB_TYPE, 		vals[COL_BIB_TYPE],
       COL_BIB_KEY, 		vals[COL_BIB_KEY],
@@ -84,86 +55,17 @@ void output_entry (GHashTable *table)
       COL_BIB_CHAP, 		vals[COL_BIB_CHAP],
       COL_BIB_SCHOOL, 		vals[COL_BIB_SCHOOL],
       -1);
-}
-
-guint parse_entry (GScanner   *scanner,
-    GHashTable *table)
+*/      
+void output_entry (gpointer data)
 {
-  int tokount;
-  /* Entry starts with @ */
-  g_scanner_get_next_token (scanner);
-  if (scanner->token != '@')
-    return G_TOKEN_ERROR;
-
-  /* Now get identifier */
-  g_scanner_get_next_token (scanner);
-  if (scanner->token != G_TOKEN_IDENTIFIER)
-    return G_TOKEN_ERROR;
-
-  g_hash_table_insert (table, g_strdup ("type"),
-      g_strdup (scanner->value.v_identifier));
-
-  /* Brace */
-  g_scanner_get_next_token (scanner);
-  if (scanner->token != G_TOKEN_LEFT_CURLY){
-    return G_TOKEN_ERROR;}
-  else
-    tokount += tokount;
-
-  /* ID */
-  g_scanner_get_next_token (scanner);
-  if (scanner->token != G_TOKEN_IDENTIFIER)
-    return G_TOKEN_ERROR;
-
-  g_hash_table_insert (table, g_strdup ("id"),
-      g_strdup (scanner->value.v_identifier));
-
-  while (TRUE)
-  {
-    char *key, *val;
-
-    g_scanner_get_next_token (scanner);
-    if (scanner->token != G_TOKEN_COMMA)
-      return G_TOKEN_ERROR;
-
-
-    g_scanner_get_next_token (scanner);
-    if (scanner->token != G_TOKEN_IDENTIFIER)
-      return G_TOKEN_ERROR;
-
-    key = g_strdup (scanner->value.v_identifier);
-
-/*    g_scanner_peek_next_token (scanner);
-    if (scanner->token == G_TOKEN_LEFT_CURLY)
-      tokount += tokount;*/
-
-    g_scanner_get_next_token (scanner);
-    if (scanner->token != '=')
-    {
-      g_free (key);
-      return G_TOKEN_ERROR;
-    }
-scanner->config->cset_skip_characters="\t\r\n ";
-    g_scanner_get_next_token (scanner);
-    if (scanner->token != G_TOKEN_STRING)
-    {
-      g_free (key);
-      return G_TOKEN_ERROR;
-    }
-//g_print(scanner->value.v_string);
-    val = g_strdup (scanner->value.v_string);
-    g_hash_table_insert(table, key, val);
-
-    g_scanner_peek_next_token (scanner);
-    if (scanner->next_token == G_TOKEN_RIGHT_CURLY)
-      break;
-  }
-
-  g_scanner_get_next_token (scanner);
-  return G_TOKEN_NONE;
+  #include <stdio.h>
+extern  FILE* yyin;
+extern int yyparse (void);
+//FILE *fin=fopen("u2.bib","r");
+//yyin=fin;
+ yyin=fmemopen(buffer,strlen(buffer),"r");
+  yyparse();
 }
-
-
 GtkWidget *create_view_and_model(void) {
   GtkCellRenderer *cell;
   void
@@ -188,13 +90,13 @@ GtkWidget *create_view_and_model(void) {
   g_object_set (cell,
       "editable", TRUE,
       NULL);
+
   g_signal_connect (cell, 
       "edited",G_CALLBACK(cell_edited), 
       tree);
 
   g_object_set_data (G_OBJECT (cell), 
       "column", GINT_TO_POINTER (COL_BIB_KEY));
-
   col_key=gtk_tree_view_column_new_with_attributes (
       "Key", cell,
       "text", COL_BIB_KEY,
@@ -206,7 +108,8 @@ GtkWidget *create_view_and_model(void) {
 
   /* #2: TYPE COLUMN */  
   cell = gtk_cell_renderer_text_new ();
-
+  g_object_set(G_OBJECT(cell), "wrap-mode", PANGO_WRAP_WORD, 
+      "wrap-width",100, NULL);
   col_type=gtk_tree_view_column_new_with_attributes (
       "Type", cell,
       "text", COL_BIB_TYPE,
@@ -219,7 +122,7 @@ GtkWidget *create_view_and_model(void) {
   /* #3: AUTHOR COLUMN */  
   cell = gtk_cell_renderer_text_new ();
   g_object_set(G_OBJECT(cell), "wrap-mode", PANGO_WRAP_WORD, 
-      "wrap-width",350, NULL);
+      "wrap-width",300, NULL);
   col_auth=gtk_tree_view_column_new_with_attributes (
       "Author", cell,
       "text", COL_BIB_AUTHOR,
@@ -237,13 +140,13 @@ GtkWidget *create_view_and_model(void) {
       NULL);
   gtk_tree_view_column_set_sort_column_id( col_year, ID_YEAR);
   gtk_tree_view_append_column (GTK_TREE_VIEW (tree), col_year);
-  gtk_tree_view_column_set_max_width  (col_year,45);
+  gtk_tree_view_column_set_max_width  (col_year,65);
 
 
   /* #5: TITLE COLUMN */  
   cell = gtk_cell_renderer_text_new ();
   g_object_set(G_OBJECT(cell), "wrap-mode", PANGO_WRAP_WORD, 
-      "wrap-width",350, NULL);
+      "wrap-width",300, NULL);
   col_title=gtk_tree_view_column_new_with_attributes (
       "Title", cell,
       "text", COL_BIB_TITLE,
@@ -255,6 +158,8 @@ GtkWidget *create_view_and_model(void) {
 
   /* #6: Journal COLUMN */  
   cell = gtk_cell_renderer_text_new ();
+    g_object_set(G_OBJECT(cell), "wrap-mode", PANGO_WRAP_WORD, 
+      "wrap-width",120, NULL);
   col_journal=gtk_tree_view_column_new_with_attributes (
       "Journal", cell,
       "text", COL_BIB_JOURNAL,

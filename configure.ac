@@ -1,9 +1,14 @@
-AC_PREREQ(2.60)
+AC_PREREQ(2.69)
 AC_INIT([mkbib], [2.0], [bnrj.rudra@yahoo.com])
 AC_CONFIG_AUX_DIR([build-aux])
-AM_INIT_AUTOMAKE([1.9.6 dist-bzip2 subdir-objects -Wno-portability])
+AM_INIT_AUTOMAKE([1.9.6 dist-bzip2 subdir-objects foreign])
+
 AC_PROG_CC
 
+AC_PROG_YACC
+                                
+AC_PROG_LEX
+                                                 
 AC_CONFIG_MACRO_DIR([m4])
 GNOME_DOC_INIT 
 

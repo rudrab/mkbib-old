@@ -44,9 +44,9 @@ void save_file(GtkWidget *widget, gpointer data){
   g_file_set_contents(filename, buffer, -1, &Err);
   if (Err)
   {      caution("Failed to save in %s",filename);
-//      g_free(str); 
-      g_error_free(Err);
-    }
+    //      g_free(str); 
+    g_error_free(Err);
+  }
   g_print("%s",filename);
   g_free(buffer);
   buf_mod=FALSE;
@@ -114,8 +114,6 @@ void new_file(GtkWidget *widget, gpointer data)
 
 void open_file(GtkWidget *widget, gpointer data)
 {
-  GScanner *scanner;
-  GHashTable *table;
   GError* error=NULL;
   GtkWidget *dialog;
   GtkFileFilter *filter;
@@ -142,71 +140,17 @@ void open_file(GtkWidget *widget, gpointer data)
     g_file_get_contents(filename, &buffer, &length , &error);
     g_assert(!error);
     buf_mod=FALSE;
-//    GtkTextBuffer* buftext;
-//    gtk_text_buffer_set_text(buftext, buffer, &length);
 
     char* markup=g_markup_printf_escaped ("<span style=\"italic\">%s</span>", filename);
     gtk_label_set_markup(GTK_LABEL(flabel), markup);
-    gtk_widget_destroy(dialog);
+    gtk_widget_destroy(dialog); 
 
-    scanner = g_scanner_new (NULL);
-    g_scanner_input_text (scanner, buffer, CHAR_BUFF);
-
-    table = g_hash_table_new_full (g_str_hash, g_str_equal, g_free, g_free);
-    do {
-      g_hash_table_remove_all (table);
-      parse_entry (scanner, table);
-      output_entry (table);
-      g_scanner_peek_next_token (scanner);
-    }
-    while (scanner->next_token != G_TOKEN_EOF &&
-	scanner->next_token != G_TOKEN_ERROR);
-
-
-    /* finish parsing */
-    g_scanner_destroy (scanner);
-    g_hash_table_destroy (table);
+    output_entry (buffer);
   }
   else{
     gtk_widget_destroy(dialog);
-    //    g_free(buffer);
+    g_free(buffer);
   }
 }
 
-/*void mk_bib(GtkWidget *widget, gpointer data) 
-  {
-  if (!filename) 
-  {
-  caution("No File Selected");
-  } 
-  else 
-  {
-  char *bibstyl = gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(bibcombo));
-  if (strcmp(bibstyl, "==select bibstyle==") == 0) 
-  {
-  caution("Select Bibliography style file");
-  }
-  else {
-  char *p1 = filename;
-  char *p2 = rindex(p1, '.');
-  if (p2 != NULL) {
-  if (strcmp(p2, ".bib") == 0) {
- *p2 = '\0';
- }
- }
- char *basefn = gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(bibcombo));
- strcat(basefn, ".tex");
- FILE *texout = fopen(basefn, "w");
- g_fprintf(texout, "\\documentclass[a4paper]{article}\n"
- "\\begin{document}\n"
- "\t\\nocite{*}\n"
- "\t\\bibliography{%s}\n"
- "\t\\bibliographystyle{%s}\n"
- "\\end{document}",
- p1, bibstyl);
- fclose(texout);
- }
- }
- }
- */
 

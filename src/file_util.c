@@ -48,7 +48,7 @@ void save_file(GtkWidget *widget, gpointer data){
     g_error_free(Err);
   }
   g_print("%s",filename);
-  g_free(buffer);
+//  g_free(buffer);
   buf_mod=FALSE;
 }
 
@@ -73,7 +73,7 @@ void save_file_as(GtkWidget *widget, gpointer data)
   {
     filename=gtk_file_chooser_get_filename(GTK_FILE_CHOOSER(dialog));
     g_file_set_contents(filename, buffer, -1, &Err);
-    g_free(buffer);
+//    g_free(buffer);
     if (Err)
     {
       caution("Failed to save in %s",filename);
@@ -135,8 +135,8 @@ void open_file(GtkWidget *widget, gpointer data)
 
   if (gtk_dialog_run(GTK_DIALOG(dialog)) == GTK_RESPONSE_ACCEPT)
   {
-    filename = gtk_file_chooser_get_filename(GTK_FILE_CHOOSER(dialog));
     gtk_list_store_clear (store);
+    filename = gtk_file_chooser_get_filename(GTK_FILE_CHOOSER(dialog));
     g_file_get_contents(filename, &buffer, &length , &error);
     g_assert(!error);
     buf_mod=FALSE;
@@ -145,7 +145,7 @@ void open_file(GtkWidget *widget, gpointer data)
     gtk_label_set_markup(GTK_LABEL(flabel), markup);
     gtk_widget_destroy(dialog); 
 
-    output_entry (buffer);
+    output_entry();
   }
   else{
     gtk_widget_destroy(dialog);

@@ -32,47 +32,21 @@ GtkTreeIter siter;
 
 void activate_func(GtkWidget *widget, gpointer data);
 
-/*  gtk_list_store_append (store, &siter);
-  gtk_list_store_set (store, &siter,
-      COL_BIB_TYPE, 		vals[COL_BIB_TYPE],
-      COL_BIB_KEY, 		vals[COL_BIB_KEY],
-      COL_BIB_AUTHOR, 		vals[COL_BIB_AUTHOR],
-      COL_BIB_YEAR, 		vals[COL_BIB_YEAR],
-      COL_BIB_TITLE, 		vals[COL_BIB_TITLE],
-      COL_BIB_PUBLISHER, 	vals[COL_BIB_PUBLISHER],
-      COL_BIB_EDITOR,  		vals[COL_BIB_EDITOR],
-      COL_BIB_VOL, 		vals[COL_BIB_VOL],
-      COL_BIB_NUMBER, 		vals[COL_BIB_NUMBER],
-      COL_BIB_PAGE, 		vals[COL_BIB_PAGE],
-      COL_BIB_MON, 		vals[COL_BIB_MON],
-      COL_BIB_NOTE, 		vals[COL_BIB_NOTE],
-      COL_BIB_ADDRESS, 		vals[COL_BIB_ADDRESS],
-      COL_BIB_EDITION, 		vals[COL_BIB_EDITION],
-      COL_BIB_JOURNAL, 		vals[COL_BIB_JOURNAL],
-      COL_BIB_SERIES, 		vals[COL_BIB_SERIES],
-      COL_BIB_BOOK, 		vals[COL_BIB_BOOK],
-      COL_BIB_ORG, 		vals[COL_BIB_ORG],
-      COL_BIB_CHAP, 		vals[COL_BIB_CHAP],
-      COL_BIB_SCHOOL, 		vals[COL_BIB_SCHOOL],
-      -1);
-*/      
-void output_entry (gpointer data)
-{
-  #include <stdio.h>
-extern  FILE* yyin;
-extern int yyparse (void);
-//FILE *fin=fopen("u2.bib","r");
-//yyin=fin;
- yyin=fmemopen(buffer,strlen(buffer),"r");
-  yyparse();
+void output_entry (gpointer data) {
+  extern  FILE* yyin;
+  extern int yyparse (void);
+  yyin=fmemopen(buffer,strlen(buffer),"r");
+  return yyparse();
 }
+
+
 GtkWidget *create_view_and_model(void) {
   GtkCellRenderer *cell;
   void
     cell_edited(GtkCellRendererText *renderer,
 	gchar *path,
 	gchar *new_text,
-	GtkTreeView *treeview);//, char *buffer, gsize length);
+	GtkTreeView *treeview);
   GtkTreeViewColumn *col_key,*col_year,*col_type,*col_auth,*col_title,*col_journal;
 
   store = gtk_list_store_new (NUM_COLS, 
@@ -158,7 +132,7 @@ GtkWidget *create_view_and_model(void) {
 
   /* #6: Journal COLUMN */  
   cell = gtk_cell_renderer_text_new ();
-    g_object_set(G_OBJECT(cell), "wrap-mode", PANGO_WRAP_WORD, 
+  g_object_set(G_OBJECT(cell), "wrap-mode", PANGO_WRAP_WORD, 
       "wrap-width",120, NULL);
   col_journal=gtk_tree_view_column_new_with_attributes (
       "Journal", cell,
@@ -208,11 +182,11 @@ void cell_edited(GtkCellRendererText *renderer,
 	12, &string12,  13, &string13,	14, &string14,	15, &string15,
 	16, &string16,	17, &string17,	18, &string18,	19, &string19,
 	-1);//
-/*    g_print("0:%s\n1:%s\n2:%s\n3:%s\n4:%s\n5:%s\n6:%s\n7:%s\n8:%s\n9:%s\n10:%s\n11:%s\n12:%s\n13:%s\n14:%s\n15:%s\n16:%s\n17:%s\n18:%s\n19:%s",
-	string0, string1, string2, string3, string4, string5, string6,
-	string7, string8, string9,string10, string11, string12, string13,
-	string14,string15, string16, string17, string18, string19);
-*/
+    /*    g_print("0:%s\n1:%s\n2:%s\n3:%s\n4:%s\n5:%s\n6:%s\n7:%s\n8:%s\n9:%s\n10:%s\n11:%s\n12:%s\n13:%s\n14:%s\n15:%s\n16:%s\n17:%s\n18:%s\n19:%s",
+	  string0, string1, string2, string3, string4, string5, string6,
+	  string7, string8, string9,string10, string11, string12, string13,
+	  string14,string15, string16, string17, string18, string19);
+	  */
     g_string_append_printf (ustring, "@%s{%s,\n",string1, string0);
     if( strlen(string2)!=0 ||string2!=NULL)
       g_string_append_printf (ustring,"\tAuthor=\"%s\",\n", string2);

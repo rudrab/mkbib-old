@@ -147,7 +147,7 @@ void parse_entry(BibEntry *bib_entry)
 
 char* concat(char* str1, char* str2) {
     char* ret = malloc(strlen(str1) + strlen(str2) + 1);
-    strcat(ret, str1);
+    strcpy(ret, str1);
     strcat(ret, str2);
     return ret;
 }

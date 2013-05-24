@@ -1,5 +1,5 @@
 AC_PREREQ(2.69)
-AC_INIT([mkbib], [2.0], [bnrj.rudra@yahoo.com])
+AC_INIT([mkbib], [2.1], [bnrj.rudra@yahoo.com])
 AC_CONFIG_AUX_DIR([build-aux])
 AM_INIT_AUTOMAKE([1.9.6 dist-bzip2 subdir-objects foreign])
 

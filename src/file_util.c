@@ -149,7 +149,7 @@ void open_file(GtkWidget *widget, gpointer data)
   }
   else{
     gtk_widget_destroy(dialog);
-    g_free(buffer);
+//    g_free(buffer);
   }
 }
 

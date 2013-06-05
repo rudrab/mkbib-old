@@ -91,7 +91,7 @@ void activate_func(GtkWidget *widget, gpointer data) {
 
     GString *tstring = g_string_new ("");
     GString *str=g_string_new(buffer);
-    g_free(buffer);
+//    g_free(buffer);
     gtk_label_set_text(GTK_LABEL(flabel), filename);
     g_string_append_printf (tstring, "@%s{%s,\n",strcombo, strkey);
     if( strlen(strAuth)!=0)

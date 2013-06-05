@@ -16,14 +16,8 @@
 #    You should have received a copy of the GNU General Public License
 #    along with mkBIB.  If not, see <http://www.gnu.org/licenses/>.
 #
-
-include $(top_srcdir)/gnome-doc-utils.make
-dist-hook: doc-dist-hook
-DOC_MODULE = mkbib-manual
-DOC_ENTITIES = 
-DOC_INCLUDES =
-DOC_FIGURES = images/mkbib.png 
-#              figures/open_document.png
-DOC_LINGUAS = bn_IN  en_GB
-DISTCLEANFILES = \
-	Makefile.in
+@YELP_HELP_RULES@
+HELP_ID=mkbib-manual
+HELP_MEDIA=images/mkbib.png
+HELP_LINGUAS = bn_IN  en_GB
+DISTCLEANFILES = Makefile.in

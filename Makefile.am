@@ -17,23 +17,23 @@
 #    along with mkBIB.  If not, see <http://www.gnu.org/licenses/>.
 #
 #
-BUILT_SOURCES = bib.h
+BUILT_SOURCES = src/bib.h
+AM_YFLAGS = -d 
+AM_LFLAGS = -i
+ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 SUBDIRS=help
 pixmapdir=$(datadir)/images
 pixmap_DATA =  images/ast_bib1.png   images/ast_gog.png \
 	       images/ast_smp.png    images/mkbib.png \
 	       images/ast_entry.png  images/ast_slct.png\
 	       images/icon.png       images/icon.svg
-AM_CFLAGS = @GTK_CFLAGS@ @LIBSOUP_CFLAGS@
-AM_CPPFLAGS= -DPIXMAP=\"$(datadir)/images\"
+AM_CFLAGS = -g @GTK_CFLAGS@ @LIBSOUP_CFLAGS@
+AM_CPPFLAGS= -g -DPIXMAP=\"$(datadir)/images\"
 bin_PROGRAMS = mkbib
 mkbib_SOURCES = src/bib.y src/scan.l src/caution.c src/search.c \
 		src/help.c  src/mkbib.c  src/update_file.c \
 		src/biblst src/main.h src/view.c src/file_util.c
-AM_YFLAGS = -d
-AM_LFLAGS = -i
 mkbib_LDADD = @GTK_LIBS@ @LIBSOUP_LIBS@ @LEXLIB@
-EXTRA_DIST=$(pixmap_DATA) gnome-doc-utils.make #m4 
+EXTRA_DIST=$(pixmap_DATA) 
 CLEANFILES = src/bib.c src/bib.h *~
-#DISTCLEANFILES=gnome-doc-utils.make
 DISTCHECK_CONFIGURE_FLAGS=--disable-scrollkeeper

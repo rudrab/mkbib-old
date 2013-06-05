@@ -32,7 +32,7 @@ GtkTreeIter siter;
 
 void activate_func(GtkWidget *widget, gpointer data);
 
-void output_entry (gpointer data) {
+char output_entry () {
   extern  FILE* yyin;
   extern int yyparse (void);
   yyin=fmemopen(buffer,strlen(buffer),"r");
@@ -61,13 +61,8 @@ GtkWidget *create_view_and_model(void) {
 
   /* #1: KEY COLUMN */  
   cell = gtk_cell_renderer_text_new ();
-  g_object_set (cell,
-      "editable", TRUE,
-      NULL);
-
-  g_signal_connect (cell, 
-      "edited",G_CALLBACK(cell_edited), 
-      tree);
+  g_object_set (cell, "editable", TRUE, NULL);
+  g_signal_connect (cell, "edited",G_CALLBACK(cell_edited), tree);
 
   g_object_set_data (G_OBJECT (cell), 
       "column", GINT_TO_POINTER (COL_BIB_KEY));
@@ -83,7 +78,11 @@ GtkWidget *create_view_and_model(void) {
   /* #2: TYPE COLUMN */  
   cell = gtk_cell_renderer_text_new ();
   g_object_set(G_OBJECT(cell), "wrap-mode", PANGO_WRAP_WORD, 
-      "wrap-width",100, NULL);
+      "wrap-width",100,"editable", TRUE,  NULL);
+  g_signal_connect (cell, "edited",G_CALLBACK(cell_edited), tree);
+  g_object_set_data (G_OBJECT (cell), 
+      "column", GINT_TO_POINTER (COL_BIB_TYPE));
+
   col_type=gtk_tree_view_column_new_with_attributes (
       "Type", cell,
       "text", COL_BIB_TYPE,
@@ -96,7 +95,11 @@ GtkWidget *create_view_and_model(void) {
   /* #3: AUTHOR COLUMN */  
   cell = gtk_cell_renderer_text_new ();
   g_object_set(G_OBJECT(cell), "wrap-mode", PANGO_WRAP_WORD, 
-      "wrap-width",300, NULL);
+      "wrap-width",100,"editable", TRUE,  NULL);
+  g_signal_connect (cell, "edited",G_CALLBACK(cell_edited), tree);
+  g_object_set_data (G_OBJECT (cell), 
+      "column", GINT_TO_POINTER (COL_BIB_AUTHOR));
+
   col_auth=gtk_tree_view_column_new_with_attributes (
       "Author", cell,
       "text", COL_BIB_AUTHOR,
@@ -108,6 +111,12 @@ GtkWidget *create_view_and_model(void) {
 
   /* #4: YEAR COLUMN */  
   cell = gtk_cell_renderer_text_new ();
+  g_object_set (cell, "editable", TRUE, NULL);
+  g_signal_connect (cell, "edited",G_CALLBACK(cell_edited), tree);
+
+  g_object_set_data (G_OBJECT (cell), 
+      "column", GINT_TO_POINTER (COL_BIB_YEAR));
+
   col_year=gtk_tree_view_column_new_with_attributes (
       "Year", cell,
       "text", COL_BIB_YEAR,
@@ -119,8 +128,12 @@ GtkWidget *create_view_and_model(void) {
 
   /* #5: TITLE COLUMN */  
   cell = gtk_cell_renderer_text_new ();
-  g_object_set(G_OBJECT(cell), "wrap-mode", PANGO_WRAP_WORD, 
-      "wrap-width",300, NULL);
+ g_object_set(G_OBJECT(cell), "wrap-mode", PANGO_WRAP_WORD, 
+      "wrap-width",100,"editable", TRUE,  NULL);
+  g_signal_connect (cell, "edited",G_CALLBACK(cell_edited), tree);
+  g_object_set_data (G_OBJECT (cell), 
+      "column", GINT_TO_POINTER (COL_BIB_TITLE));
+
   col_title=gtk_tree_view_column_new_with_attributes (
       "Title", cell,
       "text", COL_BIB_TITLE,
@@ -132,8 +145,12 @@ GtkWidget *create_view_and_model(void) {
 
   /* #6: Journal COLUMN */  
   cell = gtk_cell_renderer_text_new ();
-  g_object_set(G_OBJECT(cell), "wrap-mode", PANGO_WRAP_WORD, 
-      "wrap-width",120, NULL);
+   g_object_set(G_OBJECT(cell), "wrap-mode", PANGO_WRAP_WORD, 
+      "wrap-width",100,"editable", TRUE,  NULL);
+  g_signal_connect (cell, "edited",G_CALLBACK(cell_edited), tree);
+  g_object_set_data (G_OBJECT (cell), 
+      "column", GINT_TO_POINTER (COL_BIB_JOURNAL));
+
   col_journal=gtk_tree_view_column_new_with_attributes (
       "Journal", cell,
       "text", COL_BIB_JOURNAL,

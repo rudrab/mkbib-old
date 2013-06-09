@@ -1,0 +1,80 @@
+<page xmlns="http://projectmallard.org/1.0/"
+  type="topic"
+  id="feature">
+
+  <info>
+    <link type="guide" xref="index#overview" group="#first"/>
+
+    <credit type="author copyright">
+      <name>Rudra Banerjee</name>
+      <email>rudra.banerjee@aol.co.uk</email>
+      <years>2013</years>
+    </credit>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+    <desc><app>mkBiB</app>: what it can and what it cann't</desc>
+  </info>
+
+  <title><app>mkBiB</app>:  Features and Limitatioins</title>
+  <section id="features">
+    <title>Features</title>
+    <list>
+      <item>
+	<p>
+	  A simple gui to generate and edit bibtex file.
+	</p>
+      </item>
+      <item>
+	<p>
+	  Search google scholar from the same interface(Search in google scholar webpage, not withstanding their terms of usage,in my knowledge).
+	</p>
+      </item>
+      <item>
+	<p>
+	  Include a complete bibtex entry.
+	</p>
+      </item>
+    </list>
+  </section>
+  <section id="limitations">
+    <title>Limitations</title>
+    <list>
+      <item>
+	<p>
+	  <app>BiBTeX</app> can be used with many format. The most popular (very small number of subset) of those format is tested.
+	</p>
+      </item>
+    </list>
+  </section>
+<section id="File_Type">
+  <title>Acceptable Entry Type</title>
+  <p>Below are two type of accpted and tested entry type</p>
+    <code mime="application/x-latex">
+@article{RevModPhys.71.1253,
+title = {Nobel Lecture: Electronic structure of 
+matter\char22{}wave functions and density functionals},
+author = {Kohn, W.},
+journal = {Rev. Mod. Phys.},
+volume = {71},
+issue = {5},
+pages = {1253--1266},
+year = {1999},
+publisher = {American Physical Society}
+}
+</code>
+<code>
+@article{RevModPhys.71.1253,
+title = "Nobel Lecture: Electronic structure of 
+matter\char22{}wave functions and density functionals",
+author = "Kohn, W.",
+journal = "Rev. Mod. Phys.",
+volume = "71",
+issue = "5",
+pages = "1253--1266",
+year = "1999",
+publisher = "American Physical Society"
+}
+</code>
+<p>When a entry is made by putting value to each key as available in left pane, it will produce a entry shown below.</p>
+  </section>
+</page>
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema path="/org/gnome/clocks/" id="org.gnome.clocks" gettext-domain="@GETTEXT_PACKAGE@">
+    <key type="aa{sv}" name="world-clocks">
+      <default>[]</default>
+      <summary>Configured world clocks</summary>
+      <description>List of world clocks to show.</description>
+    </key>
+    <key type="aa{sv}" name="alarms">
+      <default>[]</default>
+      <summary>Configured alarms</summary>
+      <description>List of alarms set.</description>
+    </key>
+    <key type="u" name="timer">
+      <default>300</default>
+      <summary>Timer</summary>
+      <description>Configured timer duration in seconds.</description>
+    </key>
+  </schema>
+</schemalist>

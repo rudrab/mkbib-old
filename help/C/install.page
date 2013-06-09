@@ -1,0 +1,44 @@
+<page xmlns="http://projectmallard.org/1.0/"
+  type="topic"
+  id="install">
+
+  <info>
+    <link type="guide" xref="index#overview" group="#last"/>
+
+    <credit type="author copyright">
+      <name>Rudra Banerjee</name>
+      <email>rudra.banerjee@aol.co.uk</email>
+      <years>2013</years>
+    </credit>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+    <desc>Installing <app>mkBiB</app>: general and distro specific instruction.</desc>
+  </info>
+
+  <title>Installing <app>mkBiB</app></title>
+  <section id="new_cell">
+    <title>Required Packages</title>
+    <list>
+      <item><p>GTK+-3</p></item>
+      <item><p>libsoup</p></item>
+      <item><p>intltool</p></item>
+      <item><p>yelp-tools</p></item>
+    </list>
+  </section>
+  <section id="distro">
+    <title>Instruction for specific distro</title>
+    <section id="fedora">
+      <title>Fedora 18</title>
+      <screen>yum install libsoup-devel.x86_64 intltool\ 
+	yelp-tools intltool gtk3-devel</screen>
+    </section>
+    <section id="arch">
+      <title>Arch</title>
+    <note>
+      <p>
+	Instruction for Arch and Ubuntu will be updated soon.
+      </p>
+    </note>
+    </section>
+  </section>
+</page>
+

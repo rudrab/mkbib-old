@@ -1,0 +1,8 @@
+	../data/default.desktop.in \
+	../data/mkbib.desktop.in.in \
+	../data/mkbib-menus.ui \
+	../data/mkbib-preferences.ui \
+	../data/mkbib-source.ui \
+	../data/org.mkbib.gschema.xml.in.in \
+	../data/spanish.desktop.in \
+	../data/thai.desktop.in

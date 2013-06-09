@@ -1,0 +1,9 @@
+data/default.desktop.in
+data/mkbib.desktop.in.in
+[type: gettext/glade]data/mkbib-menus.ui
+[type: gettext/glade]data/mkbib-preferences.ui
+[type: gettext/glade]data/mkbib-source.ui
+data/org.mkbib.gschema.xml.in.in
+data/spanish.desktop.in
+data/thai.desktop.in
+

@@ -1,10 +1,20 @@
 AC_PREREQ(2.69)
-AC_INIT([mkbib], [2.1], [rudra.banerjee@aol.co.uk])
+AC_INIT([mkbib-maker], [2.1])
 AC_CONFIG_AUX_DIR([build-aux])
+AC_CONFIG_HEADERS([config.h])
+AC_CONFIG_MACRO_DIR([m4])
+
 AM_INIT_AUTOMAKE([1.9.6 dist-bzip2 subdir-objects foreign])
+
+GETTEXT_PACKAGE=AC_PACKAGE_NAME	
+AC_SUBST(GETTEXT_PACKAGE)
+AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE",[The name of the gettext domain])
+IT_PROG_INTLTOOL(0.40.0)
+PKG_PROG_PKG_CONFIG([0.22])
 
 # Checks for programs.
 AC_PROG_CC
+AM_PROG_CC_C_O
 
 AC_PROG_YACC
 if test x"$YACC" = "xyacc"; then
@@ -25,25 +35,21 @@ if test "x$LEXLIB" != "x-lfl"; then
   fi
 fi
 
-LT_PREREQ([2.2.6])
-LT_INIT
-AC_CONFIG_MACRO_DIR([m4])
-YELP_HELP_INIT
 
-# Compiling sources with per-target flags requires AM_PROG_CC_C_O
-AM_PROG_CC_C_O
-AC_PROG_INSTALL
 
-#AC_PROG_LIBTOOL
 PKG_CHECK_MODULES(LIBSOUP, libsoup-2.4 >= 2.26)
 AC_SUBST(LIBSOUP_CFLAGS)
 AC_SUBST(LIBSOUP_LIBS)
 
 AM_PATH_GTK_3_0([3.4.0],,AC_MSG_ERROR([Gtk+ 3.0.0 or higher required.]))
 
-AC_CONFIG_HEADERS([config.h])
+GLIB_GSETTINGS
+YELP_HELP_INIT
+
 AC_CONFIG_FILES([
 		 Makefile
 		 help/Makefile
+		 data/Makefile
+		 po/Makefile.in
 		 ])
 AC_OUTPUT

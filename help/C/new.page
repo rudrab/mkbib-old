@@ -1,0 +1,32 @@
+<page xmlns="http://projectmallard.org/1.0/"
+  type="topic"
+  id="new-file">
+
+  <info>
+    <link type="guide" xref="index#usage" group="first"/>
+
+    <credit type="author copyright">
+      <name>Rudra Banerjee</name>
+      <email>rudra.banerjee@aol.co.uk</email>
+      <years>2013</years>
+    </credit>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+    <desc>Creating a new <app>BiBTeX</app> using <app>mkBiB</app></desc>
+  </info>
+
+  <title>Creating a new <app>BiBTeX</app></title>
+  <p>An antry can be created either by putting values to cell as described in <code xref="#new_cell">New Cell</code> or a complete entry, as described in <code xref="#new_entry">New Entry</code> below.</p>
+  <section id="new_cell">
+    <title>New Cell</title>
+    <p>Entries are adden in the left pane. The <gui style="button">Entry Type</gui> and <gui style="button">bibkey</gui> is compulsury. 
+    </p>
+    <media type="image" src="images/left_pane.png" width="200"/> 
+  </section>
+  <section id="new_entry">
+    <title>New Entry</title>
+    <p>A complete entry can be added using <guiseq><gui>Edit</gui><gui>Edit</gui></guiseq> 
+    Enter the entry in the pane opened, and click <gui style="button">Create</gui> to create the entry.
+    </p><media type="image" src="images/entry_pane.png" width="200"/>
+  </section>
+</page>
+

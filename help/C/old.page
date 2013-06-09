@@ -1,0 +1,40 @@
+<page xmlns="http://projectmallard.org/1.0/"
+  type="topic"
+  id="old-file">
+
+  <info>
+    <link type="guide" xref="index#usage"/>
+
+    <credit type="author copyright">
+      <name>Rudra Banerjee</name>
+      <email>rudra.banerjee@aol.co.uk</email>
+      <years>2013</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Manageing an existing <app>BiBTeX</app> using <app>mkBiB</app></desc>
+
+  </info>
+  <title>Manageing an existing <app>BiBTeX</app></title>
+  <p>
+    Open an existing <app>BiBTeX</app> follows standard method of openning files i.e. <keyseq><key>Ctrl</key><key>O</key></keyseq> or <guiseq><gui>File</gui><gui>Open</gui></guiseq> in <gui style="menuitem">menubar</gui>.
+  </p>
+  <p>Manageing an existing <app>BiBTeX</app> file using <app>mkBiB</app> can be done in two way. </p>
+  <section id="edit_cell">
+    <title>Editing The View Pane</title>
+    <p>
+      All the elements visible in the right pane can be edited by double clicking on the corresponding cell.
+    </p>
+    <note style="warning"> 
+      <p>Only visible columns, i.e. 5 columns can be edited. For all other columns, you have to do it manually, using a Text Editor.</p>
+    </note>
+  </section>
+  <section id="new-cell">
+    <title>New Entry In Existing File</title>
+    <p>
+      You can enter new entries in existing <app>BiBTeX</app> as described <code xref="new-file#new_cell">here</code> or <code xref="new-file#new_entry">here</code>.
+    </p>
+  </section>
+</page>
+

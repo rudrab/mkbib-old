@@ -1,0 +1,35 @@
+<page xmlns="http://projectmallard.org/1.0/"
+  type="guide" style="2column task"
+  id="index">
+
+  <info>
+    <title type="text">mkBiB</title>
+
+    <credit type="author copyright">
+      <name>Rudra Banerjee</name>
+      <email>rudra.banerjee@aol.co.uk</email>
+      <years>2013</years>
+    </credit>
+
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+
+    <desc>Create and manage BiBTeX file.</desc>
+  </info>
+
+  <title>
+    <media type="image" mime="image/png" src="images/mkbib.png"/> mkBiB Manual
+  </title>
+
+  <section id="overview" style="2column">
+    <title>Overview</title>
+  </section>
+
+
+  <section id="usage" style="2column">
+    <title>Using <app>mkBiB</app></title>
+  </section>
+
+  <section id="troubleshooting" style="1column">
+    <title>Common problems and solutions</title>
+  </section>
+</page>

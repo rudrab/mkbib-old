@@ -20,8 +20,21 @@
 BUILT_SOURCES = src/bib.h
 AM_YFLAGS = -d 
 AM_LFLAGS = -i
+# desktop file
+# (we can't use INTLTOOL_DESKTOP_RULE here due to lp#605826)
+%.desktop: %.desktop.in
+	$(MKDIR_P) $(dir $@); LC_ALL=C $(INTLTOOL_MERGE) -d -u -c $(top_builddir)/po/.intltool-merge-cache $(top_srcdir)/po $< $@
+applicationsdir = $(datadir)/applications
+applications_DATA = data/mkbib.desktop
+dist_noinst_DATA = data/mkbib.desktop.in
+
+# gsettings
+gsettings_SCHEMAS = data/org.mkbib.gschema.xml
+@INTLTOOL_XML_NOMERGE_RULE@
+@GSETTINGS_RULES@
+
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
-SUBDIRS=help
+SUBDIRS=data help po
 pixmapdir=$(datadir)/images
 pixmap_DATA =  images/ast_bib1.png   images/ast_gog.png \
 	       images/ast_smp.png    images/mkbib.png \
@@ -34,6 +47,6 @@ mkbib_SOURCES = src/bib.y src/scan.l src/caution.c src/search.c \
 		src/help.c  src/mkbib.c  src/update_file.c \
 		src/biblst src/main.h src/view.c src/file_util.c
 mkbib_LDADD = @GTK_LIBS@ @LIBSOUP_LIBS@ @LEXLIB@
-EXTRA_DIST=$(pixmap_DATA) 
+EXTRA_DIST=$(pixmap_DATA) m4
 CLEANFILES = src/bib.c src/bib.h *~
-DISTCHECK_CONFIGURE_FLAGS=--disable-scrollkeeper
+#DISTCHECK_CONFIGURE_FLAGS = --enable-gtk-doc

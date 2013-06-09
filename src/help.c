@@ -70,7 +70,7 @@ void help_content(GtkWidget *widget, gpointer data)
   gchar *uri, *str;
   GError *Err=NULL;
 
-  uri=g_strdup("ghelp:mkbib-manual");
+  uri=g_strdup("help:mkbib-manual");
   gtk_show_uri(NULL, uri, gtk_get_current_event_time(), &Err);
   g_free(uri);
   if (Err)

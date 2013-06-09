@@ -1,0 +1,50 @@
+<page xmlns="http://projectmallard.org/1.0/"
+  type="topic"
+  id="interface">
+
+  <info>
+    <link type="guide" xref="index#overview"/>
+
+    <credit type="author copyright">
+      <name>Rudra Banerjee</name>
+      <email>rudra.banerjee@aol.co.uk</email>
+      <years>2013</years>
+    </credit>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+    <desc><app>mkBiB</app>'s Interface</desc>
+  </info>
+  
+  <title><app>mkBiB</app> Interface</title>
+  <p><app>mkBiB</app> is an editor and viewer of <app>BiBTeX</app> file. The left hand pane is the main editor, and the right hand pane is the main viewer.</p>
+    <section id="left_pane">
+      <title>Left Pane</title>
+      <p> 
+	This Left Pane is the main editing area of <app>mkBiB</app>
+      </p>
+      <media type="image" src="images/left_pane.png" width="240"/>
+      <section id="menu_bar">
+	<title><gui style="menuitem">Menu Bar</gui></title>
+	<p>
+	  <gui style="group">Menu Bar</gui> contains standard <gui style="menu">File</gui>, <gui style="menu">Edit</gui> and <gui style="menu">Help</gui>.
+	</p>
+	<p>
+	  <gui style="menuitem">File</gui> and <gui style="menuitem">Help</gui> contains traditional <gui style="menuitem">New</gui> , <gui style="menuitem">Open</gui>, <gui style="menuitem">Save</gui>, <gui style="menuitem">Save As</gui> and <gui style="menuitem">About</gui> and <gui style="menuitem">Help</gui> item with their traditional keyboard-shortcuts as listed <code xref="keyboard-shortcuts">here</code>.
+	</p>
+      </section>
+      <section id="entry_bar">
+	<title>Entries</title>
+	<p>This part is used to create a single bibtex entry giving its value one by one. When finished, press <gui style="button">Create</gui> button to create a single bibtex entry.</p>
+	<note style="tip">
+	  <p>
+	    An entry can be generated using <keyseq><key>Alt</key><key>E</key></keyseq> or <guiseq><gui style="menu">Edit</gui><gui style="menuitem">Edit</gui></guiseq> which will open a empty editor to input a complete entry.
+	  </p>
+	  </note>
+      </section>
+    </section>
+    <section id="right_pane">
+      <title>Right Pane</title>
+      <p>Right Pane the viewer of the <gui>BiBTeX</gui> and the inline editor of visible columns.</p>
+      <media type="image" src="images/right_pane.png" width="240"/>
+    </section>
+</page>
+

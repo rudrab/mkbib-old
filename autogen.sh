@@ -12,6 +12,11 @@ PKG_NAME="mkBiB"
     exit 1
 }
 
+(test -f $srcdir/build-aux/ylwrap) || {
+     autoreconf --install 
+}
+
+
 which gnome-autogen.sh || {
     echo "You need to install gnome-common package"
     exit 1

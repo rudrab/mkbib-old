@@ -4,6 +4,7 @@
 
   <info>
     <link type="guide" xref="index#usage" group="first"/>
+<link type="next" xref="old-file"/>
 
     <credit type="author copyright">
       <name>Rudra Banerjee</name>

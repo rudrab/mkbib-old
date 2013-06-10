@@ -1,25 +1,26 @@
 <page xmlns="http://projectmallard.org/1.0/"
-type="topic"
-id="google">
+  type="topic"
+  id="google">
 
-<info>
-<link type="guide" xref="index#usage"/>
+  <info>
+    <link type="guide" xref="index#usage"/>
+    <link type="next" xref="keyboard-shortcuts"/>
 
-<credit type="author copyright">
-<name>Rudra Banerjee</name>
-<email>rudra.banerjee@aol.co.uk</email>
-<years>2013</years>
-</credit>
+    <credit type="author copyright">
+      <name>Rudra Banerjee</name>
+      <email>rudra.banerjee@aol.co.uk</email>
+      <years>2013</years>
+    </credit>
 
-<include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
 
-<desc>Search <app>Google Scholar</app></desc>
+    <desc>Search <app>Google Scholar</app></desc>
 
-</info>
-<title>Search <app>Google Scholar</app></title>
-<p>Right from the left pane, user can "Search Google Scholar". Just enter <gui>Author</gui>, <gui>Title(As Keyword)</gui> and <gui>Year(Optional)</gui> and hit <gui style="button">Search Google Scholar</gui>. The result will be shown in user's default web browser.
-</p>
-<note style="tip"><p>You can do better by turning bibtex link in google scholar setting "on"</p></note>
+  </info>
+  <title>Search <app>Google Scholar</app></title>
+  <p>Right from the left pane, user can "Search Google Scholar". Just enter <gui>Author</gui>, <gui>Title(As Keyword)</gui> and <gui>Year(Optional)</gui> and hit <gui style="button">Search Google Scholar</gui>. The result will be shown in user's default web browser.
+  </p>
+  <note style="tip"><p>You can do better by turning bibtex link in google scholar setting "on"</p></note>
 
 </page>
 

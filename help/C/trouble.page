@@ -1,0 +1,28 @@
+<page xmlns="http://projectmallard.org/1.0/"
+  type="topic"
+  id="bibref">
+
+  <info>
+    <link type="guide" xref="index#troubleshooting" group="first"/>
+    <link type="next" xref="contacts"/>
+
+    <credit type="author copyright">
+      <name>Rudra Banerjee</name>
+      <email>rudra.banerjee@aol.co.uk</email>
+      <years>2013</years>
+    </credit>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+    <desc>INFO on <app>BiBTeX</app></desc>
+  </info>
+  <title>Usefule <app>BiBTeX</app> links</title>
+  <terms>
+    <item>
+      <title><sys href="http://bibtex.org">bibtex.org</sys></title>
+      <p>Here you will find everything you need to know about <app>BiBTeX</app>, or such the website clames.</p>
+    </item>
+    <item>
+      <title><sys href="http://www.cs.stir.ac.uk/~kjt/software/latex/showbst.html">Ken Turnet's page on <app>BiBTeX</app></sys></title>
+      <p>A collection of most used <app>BiBTeX</app> style's output. Very Helpful.</p>
+    </item>
+  </terms>
+</page>

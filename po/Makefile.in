@@ -17,8 +17,8 @@
 # We have the following line for use by intltoolize:
 # INTLTOOL_MAKEFILE
 
-GETTEXT_PACKAGE = mkbib-maker
-PACKAGE = mkbib-maker
+GETTEXT_PACKAGE = mkbib
+PACKAGE = mkbib
 VERSION = 2.1
 
 SHELL = /bin/sh

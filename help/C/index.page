@@ -3,17 +3,12 @@
   id="index">
 
   <info>
-    <title type="text">mkBiB</title>
-
     <credit type="author copyright">
       <name>Rudra Banerjee</name>
       <email>rudra.banerjee@aol.co.uk</email>
       <years>2013</years>
     </credit>
-
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
-
-    <desc>Create and manage BiBTeX file.</desc>
   </info>
 
   <title>

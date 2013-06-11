@@ -16,6 +16,12 @@ PKG_NAME="mkBiB"
      autoreconf --install 
 }
 
+GNOMEDOC=`which yelp-build`
+ if test -z $GNOMEDOC; then
+echo "*** The tools to build the documentation are not found,"
+echo " please intall the yelp-tool package ***"
+exit 1
+fi
 
 which gnome-autogen.sh || {
     echo "You need to install gnome-common package"

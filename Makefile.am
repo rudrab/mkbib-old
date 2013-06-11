@@ -34,12 +34,13 @@ gsettings_SCHEMAS = data/org.mkbib.gschema.xml
 @GSETTINGS_RULES@
 
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
-SUBDIRS=data help po
+SUBDIRS= data help po
 pixmapdir=$(datadir)/images
-pixmap_DATA =  images/ast_bib1.png   images/ast_gog.png \
-	       images/ast_smp.png    images/mkbib.png \
-	       images/ast_entry.png  images/ast_slct.png\
-	       images/icon.png       images/icon.svg
+pixmap_DATA = \
+	      images/mkbib.png \
+	      images/mkbib.svg \
+	      images/icon.png  \
+	      images/icon.svg
 AM_CFLAGS = -g @GTK_CFLAGS@ @LIBSOUP_CFLAGS@
 AM_CPPFLAGS= -g -DPIXMAP=\"$(datadir)/images\"
 bin_PROGRAMS = mkbib

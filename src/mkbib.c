@@ -32,6 +32,7 @@
 #include <fcntl.h>
 #include <gtk/gtk.h>
 #include "main.h"
+#include "config.h"
 
 FILE *tauth,*tyear,*ttitle;
 GtkWidget *window,
@@ -47,7 +48,7 @@ GtkAccelGroup *menuGroup;
 GtkListStore *store;
 GtkTreeIter siter;
 
-void help_about(GtkMenuItem *helpabout, GtkWindow *parentWindow);
+void help_about(GtkMenuItem *helpabout, GtkWidget *parentWindow);
 void activate_func(GtkWidget *widget, gpointer data);
 void search_gs(GtkWidget *widget, gpointer data);
 void output_entry (GHashTable *table);
@@ -59,7 +60,7 @@ void save_file(GtkWidget *widget, gpointer data);
 void save_file_as(GtkWidget *widget, gpointer data);
 void mk_bib(GtkWidget *widget, gpointer data);
 void caution();
-void help_content(GtkWidget *widget, gpointer data);
+void help_content(GtkWidget *widget);
 void gen_gs(GtkWidget *widget, gpointer data);
 
 GdkPixbuf *create_pixbuf(const gchar * iconname) {
@@ -141,7 +142,7 @@ int main(int argc,
   window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
   gtk_window_set_title(GTK_WINDOW(window), "mkBIB");
   gtk_container_set_border_width(GTK_CONTAINER(window), 5);
-  gchar *sicon=g_strdup_printf("%s/icon.svg",PIXMAP);
+  gchar *sicon=g_strdup_printf("%s/mkbib.svg",PIXMAP);
   gtk_window_set_icon(GTK_WINDOW(window), 
       create_pixbuf(sicon));
   g_free(sicon);

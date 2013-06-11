@@ -1,0 +1,23 @@
+<page xmlns="http://projectmallard.org/1.0/"
+  type="topic"
+  id="contacts">
+
+  <info>
+    <link type="guide" xref="index#troubleshooting" group="first"/>
+
+    <credit type="author copyright">
+      <name>Rudra Banerjee</name>
+      <email>rudra.banerjee@aol.co.uk</email>
+      <years>2013</years>
+    </credit>
+    <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
+    <desc>INFO on <app>BiBTeX</app></desc>
+  </info>
+  <title>Contacts</title>
+  <terms>
+    <item>
+      <title><link href="mailto:rudra.banerjee@aol.co.uk">Mail Me</link></title>
+      <p>Contact Me to report bugs and suggested enhancements.</p>
+    </item>
+  </terms>
+</page>

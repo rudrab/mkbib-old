@@ -39,100 +39,94 @@ GError* error=NULL;
 
 void activate_func(GtkWidget *widget, gpointer data) {
   Entries *e = (Entries*) data;
-  //    GtkTextMark *mark;
-  //    GtkTextIter iter;
-  const gchar *strcombo, *strkey, *strAuth, *strEditor, *strTitle,
-	*strPublisher, *strVol, *strIss, *strPage, *strMon, *strNote,
-	*strKey, *strYear, *strAdd, *strEdition,
-	*strJournal, *strSeries, *strBooktitle, *strOrg,
-	*strChap, *strSchool;
+  const gchar *strings[21]={""};
+/*  strings[0]  = g_malloc(strlen(gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(e->combo))));
+  strings[1]  = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entry1))));
+  strings[2]  = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryAuth))));
+  strings[3]  = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryEditor))));
+  strings[4]  = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryTitle))));
+  strings[5]  = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryPublisher))));
+  strings[6]  = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryVol))));
+  strings[7]  = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryNumber))));
+  strings[8]  = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryPage))));
+  strings[9]  = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryMon))));
+  strings[10] = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryNote))));
+  strings[11] = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryKey))));
+  strings[12] = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryYear))));
+  strings[13] = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryAddress))));
+  strings[14] = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryEdition))));
+  strings[15] = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryJournal))));
+  strings[16] = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entrySeries))));
+  strings[17] = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryBooktitle))));
+  strings[18] = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryOrg))));
+  strings[19] = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entrySchool))));
+  strings[20] = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryChap))));
+*/
+  strings[0]  = g_strdup(gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(e->combo)));
+  strings[1]  = g_strdup(gtk_entry_get_text(GTK_ENTRY(e->entry1)));
+  strings[2]  = g_strdup(gtk_entry_get_text(GTK_ENTRY(e->entryAuth)));
+  strings[3]  = g_strdup(gtk_entry_get_text(GTK_ENTRY(e->entryEditor)));
+  strings[4]  = g_strdup(gtk_entry_get_text(GTK_ENTRY(e->entryTitle)));
+  strings[5]  = g_strdup(gtk_entry_get_text(GTK_ENTRY(e->entryPublisher)));
+  strings[6]  = g_strdup(gtk_entry_get_text(GTK_ENTRY(e->entryVol)));
+  strings[7]  = g_strdup(gtk_entry_get_text(GTK_ENTRY(e->entryNumber)));
+  strings[8]  = g_strdup(gtk_entry_get_text(GTK_ENTRY(e->entryPage)));
+  strings[9]  = g_strdup(gtk_entry_get_text(GTK_ENTRY(e->entryMon)));
+  strings[10] = g_strdup(gtk_entry_get_text(GTK_ENTRY(e->entryNote)));
+  strings[11] = g_strdup(gtk_entry_get_text(GTK_ENTRY(e->entryKey)));
+  strings[12] = g_strdup(gtk_entry_get_text(GTK_ENTRY(e->entryYear)));
+  strings[13] = g_strdup(gtk_entry_get_text(GTK_ENTRY(e->entryAddress)));
+  strings[14] = g_strdup(gtk_entry_get_text(GTK_ENTRY(e->entryEdition)));
+  strings[15] = g_strdup(gtk_entry_get_text(GTK_ENTRY(e->entryJournal)));
+  strings[16] = g_strdup(gtk_entry_get_text(GTK_ENTRY(e->entrySeries)));
+  strings[17] = g_strdup(gtk_entry_get_text(GTK_ENTRY(e->entryBooktitle)));
+  strings[18] = g_strdup(gtk_entry_get_text(GTK_ENTRY(e->entryOrg)));
+  strings[19] = g_strdup(gtk_entry_get_text(GTK_ENTRY(e->entrySchool)));
+  strings[20] = g_strdup(gtk_entry_get_text(GTK_ENTRY(e->entryChap)));
+ 
 
-  strcombo = gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(e->combo));
-  strkey = gtk_entry_get_text(GTK_ENTRY(e->entry1));
-  strAuth = gtk_entry_get_text(GTK_ENTRY(e->entryAuth));
-  strEditor = gtk_entry_get_text(GTK_ENTRY(e->entryEditor));
-  strTitle = gtk_entry_get_text(GTK_ENTRY(e->entryTitle));
-  strPublisher = gtk_entry_get_text(GTK_ENTRY(e->entryPublisher));
-  strVol = gtk_entry_get_text(GTK_ENTRY(e->entryVol));
-  strIss = gtk_entry_get_text(GTK_ENTRY(e->entryNumber));
-  strPage = gtk_entry_get_text(GTK_ENTRY(e->entryPage));
-  strMon = gtk_entry_get_text(GTK_ENTRY(e->entryMon));
-  strNote = gtk_entry_get_text(GTK_ENTRY(e->entryNote));
-  strKey = gtk_entry_get_text(GTK_ENTRY(e->entryKey));
-  strYear = gtk_entry_get_text(GTK_ENTRY(e->entryYear));
-  strAdd = gtk_entry_get_text(GTK_ENTRY(e->entryAddress));
-  strEdition = gtk_entry_get_text(GTK_ENTRY(e->entryEdition));
-  strJournal = gtk_entry_get_text(GTK_ENTRY(e->entryJournal));
-  strSeries = gtk_entry_get_text(GTK_ENTRY(e->entrySeries));
-  strBooktitle = gtk_entry_get_text(GTK_ENTRY(e->entryBooktitle));
-  strOrg = gtk_entry_get_text(GTK_ENTRY(e->entryOrg));
-  strSchool = gtk_entry_get_text(GTK_ENTRY(e->entrySchool));
-  strChap = gtk_entry_get_text(GTK_ENTRY(e->entryChap));
-
-
-  if(strcmp (strcombo,"==Entry Type==")==0){
-    char 	*err_entry="Select Entry Type";
-    caution(err_entry);
+  if(strcmp (strings[0],"==Entry Type==")==0){
+    caution("Select Entry Type");
   }
-  else if(strcmp(strkey,"")==0){
-    char *err_key="Select Key";
-    caution(err_key);
+  else if(strcmp(strings[1],"")==0){
+    caution("Select Key");
   }
   else{
     gtk_list_store_append(store, &siter);
     gtk_list_store_set(store, &siter,
-	COL_BIB_KEY, 		strkey,
-	COL_BIB_TYPE, 		strcombo,
-	COL_BIB_AUTHOR, 	strAuth,
-	COL_BIB_YEAR, 		strYear,
-	COL_BIB_TITLE, 		strTitle,
-	COL_BIB_JOURNAL,	strJournal,
+	COL_BIB_KEY, 		strings[0],
+	COL_BIB_TYPE, 		strings[1],
+	COL_BIB_AUTHOR, 	strings[2],
+	COL_BIB_YEAR, 		strings[12],
+	COL_BIB_TITLE, 		strings[4],
+	COL_BIB_JOURNAL,	strings[5],
 	-1);
 
     GString *tstring = g_string_new ("");
     GString *str=g_string_new(buffer);
-//    g_free(buffer);
     gtk_label_set_text(GTK_LABEL(flabel), filename);
-    g_string_append_printf (tstring, "@%s{%s,\n",strcombo, strkey);
-    if( strlen(strAuth)!=0)
-      g_string_append_printf (tstring,"\tAuthor=\"%s\",\n", strAuth );
-    if( strlen(strEditor)!=0)
-      g_string_append_printf (tstring,"\tEditor=\"%s\",\n", strEditor);
-    if( strlen(strTitle)!=0)
-      g_string_append_printf (tstring, "\tTitle=\"%s\",\n", strTitle);
-    if( strlen(strPublisher)!=0)
-      g_string_append_printf (tstring, "\tPublisher=\"%s\",\n", strPublisher);
-    if( strlen(strVol)!=0)
-      g_string_append_printf (tstring, "\tVolume=\"%s\",\n", strVol);
-    if( strlen(strIss)!=0)
-      g_string_append_printf (tstring, "\tNumber=\"%s\",\n", strIss);
-    if( strlen(strPage)!=0)
-      g_string_append_printf (tstring, "\tPage=\"%s\",\n", strPage);
-    if( strlen(strMon)!=0)
-      g_string_append_printf (tstring, "\tMonth=\"%s\",\n", strMon);
-    if( strlen(strNote)!=0)
-      g_string_append_printf (tstring, "\tNote=\"%s\",\n", strNote);
-    if( strlen(strKey)!=0)
-      g_string_append_printf (tstring, "\tKey=\"%s\",\n", strKey);
-    if( strlen(strYear)!=0)
-      g_string_append_printf (tstring, "\tYear=\"%s\",\n", strYear);
-    if( strlen(strAdd)!=0)
-      g_string_append_printf (tstring, "\tAddress=\"%s\",\n", strAdd);
-    if( strlen(strEdition)!=0)
-      g_string_append_printf (tstring, "\tEdition=\"%s\",\n", strEdition);
-    if( strlen(strJournal)!=0)
-      g_string_append_printf (tstring, "\tJournal=\"%s\",\n", strJournal);
-    if( strlen(strSeries)!=0)
-      g_string_append_printf (tstring, "\tSeries=\"%s\",\n", strSeries);
-    if( strlen(strBooktitle)!=0)
-      g_string_append_printf (tstring, "\tBooktitle=\"%s\",\n", strBooktitle);
-    if( strlen(strOrg)!=0)
-      g_string_append_printf (tstring, "\tOrganization=\"%s\",\n", strOrg);
-    if( strlen(strChap)!=0)
-      g_string_append_printf (tstring, "\tChapter=\"%s\",\n", strChap);
-    if( strlen(strSchool)!=0)
-      g_string_append_printf (tstring, "\tSchool=\"%s\",\n", strSchool);
-    g_string_append_printf (tstring,"}\n");
+    g_string_append_printf (tstring, "@%s{%s",strings[0], strings[1]);
+    gchar *keyword[21] = {
+      "Type"        , "ID",
+      "Author" 	    , "Editor" , "Title" , "Publisher",
+      "Volume"      , "Number" , "Pages"  , "Month"    ,
+      "Note"        , "Key"    , "Year"  , "Address"  ,
+      "Edition"     , "Journal", "Series", "Booktitle",
+      "Organization", "Chapter", "School"};
+
+    int i=2;
+    while (i < 21) {
+      if (strlen(strings[i]) != 0) {
+	g_string_append_printf(tstring, ",\n\t%s=\"%s\"",
+	    keyword[i], strings[i]);
+      g_free((char*)strings[i]);
+      strings[i]=NULL;
+      g_print("Cleaned:%d\n",i);
+      } 
+      i++;
+    }
+
+    g_string_append_printf (tstring,"\n}\n");
     g_string_append(str,tstring->str);
     g_string_free(tstring, TRUE);
     buffer=str->str;

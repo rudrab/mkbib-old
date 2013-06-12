@@ -16,7 +16,7 @@
   <title>Contacts</title>
   <terms>
     <item>
-      <title><link href="mailto:rudra.banerjee@aol.co.uk">Mail Me</link></title>
+      <title><sys href="mailto:rudra.banerjee@aol.co.uk">Mail Me</sys></title>
       <p>Contact Me to report bugs and suggested enhancements.</p>
     </item>
   </terms>

@@ -47,6 +47,7 @@ char *filename,*key, *val;
 GtkAccelGroup *menuGroup;
 GtkListStore *store;
 GtkTreeIter siter;
+gchar *buffer = NULL;
 
 void help_about(GtkMenuItem *helpabout, GtkWidget *parentWindow);
 void activate_func(GtkWidget *widget, gpointer data);
@@ -97,21 +98,21 @@ void main_window_quit(GtkWidget *widget, gpointer data){
   else{
     gboolean ret = FALSE;
     GtkWidget *dialog = gtk_message_dialog_new (NULL,
-      GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
-      GTK_MESSAGE_QUESTION,
-      GTK_BUTTONS_YES_NO,
-      "Do you want to save the changes before quit?");
+	GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
+	GTK_MESSAGE_QUESTION,
+	GTK_BUTTONS_YES_NO,
+	"Do you want to save the changes before quit?");
 
-  gtk_window_set_title (GTK_WINDOW (dialog), "Save?");
-  if (gtk_dialog_run (GTK_DIALOG (dialog)) == GTK_RESPONSE_NO)
-  {
-    gtk_main_quit();
-  }      
-  else {
-    save_file_as(widget,data);
-    gtk_main_quit();
-  }
-  gtk_widget_destroy (dialog);      
+    gtk_window_set_title (GTK_WINDOW (dialog), "Save?");
+    if (gtk_dialog_run (GTK_DIALOG (dialog)) == GTK_RESPONSE_NO)
+    {
+      gtk_main_quit();
+    }      
+    else {
+      save_file_as(widget,data);
+      gtk_main_quit();
+    }
+    gtk_widget_destroy (dialog);      
   }     
 }
 

@@ -6,7 +6,7 @@
   <info>
     <revision pkgversion="3.8" version="0.1" date="2013-03-29" status="candidate"/>
     <link type="guide" xref="index#usage" group="#last"/>
-    <link type="next" xref="bibref"/>
+    <link type="next" xref="index#troubleshooting"/>
 
     <credit type="author copyright">
       <name>Rudra Banerjee</name>

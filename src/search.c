@@ -23,7 +23,6 @@
 #include <libsoup/soup.h>
 #include "main.h"
 #define gs_BUFF 1024
-
 GtkWidget* gs_txt;
 
 void search_gs(GtkWidget *widget, gpointer data) {
@@ -100,7 +99,14 @@ void gs_open(GtkWidget *window, gpointer data) {
   gtk_text_buffer_get_start_iter (gs_buf, &start);
   gtk_text_buffer_get_end_iter (gs_buf, &end);
   gchar *gs_text = gtk_text_buffer_get_text (gs_buf, &start, &end, FALSE);
-  strcat(buffer, gs_text);
+
+  if (buffer == NULL){
+    buffer = (char *) malloc(strlen(gs_text) + 1);
+    strcpy(buffer,gs_text);
+  }
+  else{
+    buffer=g_strconcat(buffer,gs_text,NULL);
+  }
   gtk_list_store_clear(store);
   output_entry ();
   buf_mod=TRUE;

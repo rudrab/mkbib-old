@@ -128,7 +128,7 @@ GtkWidget *create_view_and_model(void) {
 
   /* #5: TITLE COLUMN */  
   cell = gtk_cell_renderer_text_new ();
- g_object_set(G_OBJECT(cell), "wrap-mode", PANGO_WRAP_WORD, 
+  g_object_set(G_OBJECT(cell), "wrap-mode", PANGO_WRAP_WORD, 
       "wrap-width",300,"editable", TRUE,  NULL);
   g_signal_connect (cell, "edited",G_CALLBACK(cell_edited), tree);
   g_object_set_data (G_OBJECT (cell), 
@@ -145,7 +145,7 @@ GtkWidget *create_view_and_model(void) {
 
   /* #6: Journal COLUMN */  
   cell = gtk_cell_renderer_text_new ();
-   g_object_set(G_OBJECT(cell), "wrap-mode", PANGO_WRAP_WORD, 
+  g_object_set(G_OBJECT(cell), "wrap-mode", PANGO_WRAP_WORD, 
       "wrap-width",100,"editable", TRUE,  NULL);
   g_signal_connect (cell, "edited",G_CALLBACK(cell_edited), tree);
   g_object_set_data (G_OBJECT (cell), 

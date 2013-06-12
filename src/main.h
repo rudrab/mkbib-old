@@ -37,7 +37,7 @@ typedef enum
   NUM_ID
 }sort_ids;
 
-char* buffer;
+extern gchar *buffer;
 gsize length;
 GtkListStore *store;
 gboolean buf_mod;

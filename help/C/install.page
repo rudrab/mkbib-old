@@ -4,7 +4,7 @@
 
   <info>
     <link type="guide" xref="index#overview" group="#last"/>
-<link type="next" xref="new-file"/>
+    <link type="next" xref="index#usage"/>
 
     <credit type="author copyright">
       <name>Rudra Banerjee</name>
@@ -23,6 +23,7 @@
       <item><p>libsoup</p></item>
       <item><p>intltool</p></item>
       <item><p>yelp-tools</p></item>
+      <item><p>gnu-flex and bison</p></item>
     </list>
   </section>
   <section id="distro">
@@ -30,15 +31,16 @@
     <section id="fedora">
       <title>Fedora 18</title>
       <screen>yum install libsoup-devel.x86_64 intltool\ 
-	yelp-tools intltool gtk3-devel</screen>
+	yelp-tools intltool gtk3-devel \
+	flex flex-devel bison</screen>
     </section>
     <section id="arch">
       <title>Arch</title>
-    <note>
-      <p>
-	Instruction for Arch and Ubuntu will be updated soon.
-      </p>
-    </note>
+      <note>
+	<p>
+	  Instruction for Arch and Ubuntu will be updated soon.
+	</p>
+      </note>
     </section>
   </section>
 </page>

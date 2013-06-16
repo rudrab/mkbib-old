@@ -117,7 +117,6 @@ ECHO_C =
 ECHO_N = -n
 ECHO_T = 
 EXEEXT = 
-GETTEXT_PACKAGE = mkbib
 GLIB_COMPILE_SCHEMAS = glib-compile-schemas
 GMSGFMT = /usr/bin/msgfmt
 GSETTINGS_DISABLE_SCHEMAS_COMPILE = 
@@ -219,7 +218,7 @@ target_alias =
 top_build_prefix = ../
 top_builddir = ..
 top_srcdir = ..
-gladedir = $(datadir)/giggle/glade
+gladedir = $(datadir)/mkbib/glade
 dist_glade_DATA = \
 	main-window.ui
 

@@ -23,30 +23,32 @@ AM_LFLAGS = -i
 # desktop file
 # (we can't use INTLTOOL_DESKTOP_RULE here due to lp#605826)
 %.desktop: %.desktop.in
-	$(MKDIR_P) $(dir $@); LC_ALL=C $(INTLTOOL_MERGE) -d -u -c $(top_builddir)/po/.intltool-merge-cache $(top_srcdir)/po $< $@
+#	$(MKDIR_P) $(dir $@); LC_ALL=C $(INTLTOOL_MERGE) -d -u -c $(top_builddir)/po/.intltool-merge-cache $(top_srcdir)/po $< $@
 applicationsdir = $(datadir)/applications
 applications_DATA = data/mkbib.desktop
 dist_noinst_DATA = data/mkbib.desktop.in
 
 # gsettings
-gsettings_SCHEMAS = data/org.mkbib.gschema.xml
-@INTLTOOL_XML_NOMERGE_RULE@
-@GSETTINGS_RULES@
+#gsettings_SCHEMAS = data/org.mkbib.gschema.xml
+##@INTLTOOL_XML_NOMERGE_RULE@
+##@GSETTINGS_RULES@
 
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
-SUBDIRS= data help po
+SUBDIRS= data help #po
 pixmapdir=$(datadir)/images
 pixmap_DATA = \
 	      images/mkbib.png \
 	      images/mkbib.svg \
 	      images/icon.png  \
 	      images/icon.svg
-AM_CFLAGS = -g @GTK_CFLAGS@ @LIBSOUP_CFLAGS@
-AM_CPPFLAGS= -g -DPIXMAP=\"$(datadir)/images\"
+AM_CFLAGS =  @GTK_CFLAGS@ @LIBSOUP_CFLAGS@
+AM_CPPFLAGS= -DPIXMAP=\"$(datadir)/images\"
 bin_PROGRAMS = mkbib
-mkbib_SOURCES = src/bib.y src/scan.l src/caution.c src/search.c \
+mkbib_SOURCES = \ 
+                src/bib.y src/scan.l src/caution.c src/search.c \
 		src/help.c  src/mkbib.c  src/update_file.c \
 		src/biblst src/main.h src/view.c src/file_util.c
+
 mkbib_LDADD = @GTK_LIBS@ @LIBSOUP_LIBS@ @LEXLIB@
 EXTRA_DIST=$(pixmap_DATA) m4
 CLEANFILES = src/bib.c src/bib.h *~

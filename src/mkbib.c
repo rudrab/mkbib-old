@@ -245,8 +245,8 @@ int main(int argc,
   gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scrolledwindow),
       GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
 
-  tree = create_view_and_model();
-  gtk_container_add(GTK_CONTAINER(scrolledwindow), tree);
+//  tree = create_view_and_model();
+  gtk_container_add(GTK_CONTAINER(scrolledwindow), create_view_and_model());
 
   notebook = gtk_notebook_new();
   gtk_notebook_set_tab_pos(GTK_NOTEBOOK(notebook), GTK_POS_TOP);

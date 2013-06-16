@@ -20,7 +20,7 @@ HELP_MEDIA = \
 	     images/mkbib.png \
 	     images/left_pane.png \
 	     images/right_pane.png \
-	     images/mkbib.png
+	     images/entry_pane.png
 
 HELP_LINGUAS =
 

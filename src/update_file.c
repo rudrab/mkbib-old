@@ -34,34 +34,12 @@ char *filename;
 void caution();
 GtkListStore *store;
 GtkTreeIter siter;
-GError* error=NULL;
+GError* error = NULL;
 
 
 void activate_func(GtkWidget *widget, gpointer data) {
   Entries *e = (Entries*) data;
-  const gchar *strings[21]={""};
-/*  strings[0]  = g_malloc(strlen(gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(e->combo))));
-  strings[1]  = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entry1))));
-  strings[2]  = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryAuth))));
-  strings[3]  = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryEditor))));
-  strings[4]  = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryTitle))));
-  strings[5]  = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryPublisher))));
-  strings[6]  = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryVol))));
-  strings[7]  = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryNumber))));
-  strings[8]  = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryPage))));
-  strings[9]  = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryMon))));
-  strings[10] = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryNote))));
-  strings[11] = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryKey))));
-  strings[12] = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryYear))));
-  strings[13] = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryAddress))));
-  strings[14] = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryEdition))));
-  strings[15] = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryJournal))));
-  strings[16] = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entrySeries))));
-  strings[17] = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryBooktitle))));
-  strings[18] = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryOrg))));
-  strings[19] = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entrySchool))));
-  strings[20] = g_malloc(strlen(gtk_entry_get_text(GTK_ENTRY(e->entryChap))));
-*/
+  const gchar *strings[21] = {""};
   strings[0]  = g_strdup(gtk_combo_box_text_get_active_text(GTK_COMBO_BOX_TEXT(e->combo)));
   strings[1]  = g_strdup(gtk_entry_get_text(GTK_ENTRY(e->entry1)));
   strings[2]  = g_strdup(gtk_entry_get_text(GTK_ENTRY(e->entryAuth)));
@@ -131,7 +109,6 @@ void activate_func(GtkWidget *widget, gpointer data) {
     g_string_free(tstring, TRUE);
     buffer=str->str;
     buf_mod=TRUE;
-  }
   gtk_entry_set_text(GTK_ENTRY(e->entry1),"");
   gtk_entry_set_text(GTK_ENTRY(e->entryAuth),"");
   gtk_entry_set_text(GTK_ENTRY(e->entryEditor),"");
@@ -152,5 +129,6 @@ void activate_func(GtkWidget *widget, gpointer data) {
   gtk_entry_set_text(GTK_ENTRY(e->entryOrg),"");
   gtk_entry_set_text(GTK_ENTRY(e->entryChap),"");
   gtk_entry_set_text(GTK_ENTRY(e->entrySchool),"");
+  }
 }
 

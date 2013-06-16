@@ -6,11 +6,11 @@ AC_CONFIG_MACRO_DIR([m4])
 
 AM_INIT_AUTOMAKE([1.9.6 dist-bzip2 subdir-objects foreign])
 
-GETTEXT_PACKAGE=AC_PACKAGE_NAME	
-AC_SUBST(GETTEXT_PACKAGE)
-AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE",[The name of the gettext domain])
+#GETTEXT_PACKAGE=AC_PACKAGE_NAME	
+#AC_SUBST(GETTEXT_PACKAGE)
+#AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE",[The name of the gettext domain])
 IT_PROG_INTLTOOL(0.40.0)
-AC_SUBST(GETTEXT_PACKAGE, mkbib)
+#AC_SUBST(GETTEXT_PACKAGE, mkbib)
 PKG_PROG_PKG_CONFIG([0.22])
 
 # Checks for programs.
@@ -51,6 +51,5 @@ AC_CONFIG_FILES([
 		 Makefile
 		 help/Makefile
 		 data/Makefile
-		 po/Makefile.in
 		 ])
 AC_OUTPUT

@@ -1,0 +1,17 @@
+mkBiB - A simple BiBTeX manager.
+
+++++
+Source tree:
+
+ data/ 
+ 	contains the .desktop file
+
+ help/
+ 	mkBiB reference 
+
+ images/
+ m4/ 
+ po/
+ src/
+ 	contains the source code.
+Jun 12 14:09:52 BST 2013 RudraB <rudra.banerjee (at) aol.co.uk>

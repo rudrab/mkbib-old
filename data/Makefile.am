@@ -1,4 +1,4 @@
-gladedir = $(datadir)/giggle/glade
+gladedir = $(datadir)/mkbib/glade
 dist_glade_DATA = \
 	main-window.ui
 

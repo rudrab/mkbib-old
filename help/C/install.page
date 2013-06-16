@@ -16,7 +16,18 @@
   </info>
 
   <title>Installing <app>mkBiB</app></title>
-  <section id="new_cell">
+  <section id="Download">
+    <title>Download</title>
+    <p>
+      The most recent updated will always be available from <link href="http://download.savannah.gnu.org/releases/mkbib/">SAVANNAH REPO</link>.
+    </p>
+    <p>
+      The stable version will be availavle from <link href="http://www.ctan.org/pkg/mkbib">CTAN REPO</link>
+    </p>
+
+
+  </section>
+  <section id="install_generic">
     <title>Required Packages</title>
     <list>
       <item><p>GTK+-3</p></item>

@@ -101,11 +101,13 @@ void gs_open(GtkWidget *window, gpointer data) {
   gchar *gs_text = gtk_text_buffer_get_text (gs_buf, &start, &end, FALSE);
 
   if (buffer == NULL){
-    buffer = (char *) malloc(strlen(gs_text) + 1);
-    strcpy(buffer,gs_text);
+//    buffer = (char *) malloc(strlen(gs_text) + 1);
+    buffer=g_strdup(gs_text);
   }
   else{
+    gchar *t=buffer;
     buffer=g_strconcat(buffer,gs_text,NULL);
+    g_free(t);
   }
   gtk_list_store_clear(store);
   output_entry ();

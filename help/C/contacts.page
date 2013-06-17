@@ -16,8 +16,12 @@
   <title>Contacts</title>
   <terms>
     <item>
-      <title><sys href="mailto:rudra.banerjee@aol.co.uk">Mail Me</sys></title>
-      <p>Contact Me to report bugs and suggested enhancements.</p>
+      <title><link href="mailto:mkbib-discuss@nongnu.org">Mailing List</link></title>
+      <p>mkBiB Mailing List</p>
+    </item>
+    <item>
+      <title><link href="https://savannah.nongnu.org/support/?group=mkbib">Report Bugs</link></title>
+      <p>Bug reporting tools</p>
     </item>
   </terms>
 </page>

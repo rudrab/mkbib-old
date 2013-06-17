@@ -34,7 +34,7 @@ dist_noinst_DATA = data/mkbib.desktop.in
 ##@GSETTINGS_RULES@
 
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
-SUBDIRS= data help #po
+SUBDIRS= data help po
 pixmapdir=$(datadir)/images
 pixmap_DATA = \
 	      images/mkbib.png \
@@ -50,6 +50,6 @@ mkbib_SOURCES = \
 		src/biblst src/main.h src/view.c src/file_util.c
 
 mkbib_LDADD = @GTK_LIBS@ @LIBSOUP_LIBS@ @LEXLIB@
-EXTRA_DIST=$(pixmap_DATA) m4
+EXTRA_DIST=$(pixmap_DATA) m4 autogen.sh
 CLEANFILES = src/bib.c src/bib.h *~
 #DISTCHECK_CONFIGURE_FLAGS = --enable-gtk-doc

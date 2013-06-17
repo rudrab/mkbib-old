@@ -14,7 +14,7 @@
     <include href="legal.xml" xmlns="http://www.w3.org/2001/XInclude"/>
     <desc>INFO on <app>BiBTeX</app></desc>
   </info>
-  <title>Usefule <app>BiBTeX</app> links</title>
+  <title>Useful <app>BiBTeX</app> links</title>
   <terms>
     <item>
       <title><sys href="http://bibtex.org">bibtex.org</sys></title>

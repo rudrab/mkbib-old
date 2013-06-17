@@ -51,5 +51,6 @@ AC_CONFIG_FILES([
 		 Makefile
 		 help/Makefile
 		 data/Makefile
+		 po/Makefile.in
 		 ])
 AC_OUTPUT

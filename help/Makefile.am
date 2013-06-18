@@ -22,7 +22,7 @@ HELP_MEDIA = \
 	     images/right_pane.png \
 	     images/entry_pane.png
 
-HELP_LINGUAS =
+HELP_LINGUAS =bn_IN en_GB 
 
 DISTCLEANFILES = \
 	Makefile.in

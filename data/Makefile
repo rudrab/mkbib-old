@@ -117,6 +117,7 @@ ECHO_C =
 ECHO_N = -n
 ECHO_T = 
 EXEEXT = 
+GETTEXT_PACKAGE = mkbib
 GLIB_COMPILE_SCHEMAS = glib-compile-schemas
 GMSGFMT = /usr/bin/msgfmt
 GSETTINGS_DISABLE_SCHEMAS_COMPILE = 

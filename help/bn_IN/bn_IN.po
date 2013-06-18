@@ -1,0 +1,641 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2013-06-17 16:19+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr ""
+
+#. (itstool) path: credit/name
+#: C/contacts.page:9
+#: C/feature.page:9
+#: C/google.page:10
+#: C/index.page:7
+#: C/install.page:10
+#: C/interface.page:10
+#: C/introduction.page:9
+#: C/keyboard-shortcuts.page:12
+#: C/new.page:10
+#: C/old.page:10
+#: C/trouble.page:10
+msgid "Rudra Banerjee"
+msgstr "রুদ্র ব্যাণার্জী"
+
+#. (itstool) path: credit/years
+#: C/contacts.page:11
+#: C/feature.page:11
+#: C/google.page:12
+#: C/index.page:9
+#: C/install.page:12
+#: C/interface.page:12
+#: C/introduction.page:11
+#: C/keyboard-shortcuts.page:14
+#: C/new.page:12
+#: C/old.page:12
+#: C/trouble.page:12
+msgid "2013"
+msgstr "২০১৩"
+
+#. (itstool) path: info/desc
+#: C/contacts.page:14
+#: C/trouble.page:15
+msgid "INFO on <app>BiBTeX</app>"
+msgstr "<app>bibtex</app> সম্পর্কীয় কিছু তথ্য"
+
+#. (itstool) path: page/title
+#: C/contacts.page:16
+msgid "Contacts"
+msgstr "যোগাযোগ"
+
+#. (itstool) path: item/title
+#: C/contacts.page:19
+msgid "<link href=\"mailto:mkbib-discuss@nongnu.org\">Mailing List</link>"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/contacts.page:20
+msgid "mkBiB Mailing List"
+msgstr "<app>mkBiB</app> Mailing List"
+
+#. (itstool) path: item/title
+#: C/contacts.page:23
+msgid "<link href=\"https://savannah.nongnu.org/support/?group=mkbib\">Report Bugs</link>"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/contacts.page:24
+msgid "Bug reporting tools"
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/feature.page:14
+msgid "<app>mkBiB</app>: what it can and what it cann't"
+msgstr "<app>mkBiB</app>: কি করে আর কি করে না"
+
+#. (itstool) path: page/title
+#: C/feature.page:17
+msgid "<app>mkBiB</app>: Features and Limitatioins"
+msgstr "<app>mkBiB</app>: ক্ষমতা আর সীমাবদ্ধতা"
+
+#. (itstool) path: section/title
+#: C/feature.page:19
+msgid "Features"
+msgstr "ক্ষমতা"
+
+#. (itstool) path: item/p
+#: C/feature.page:22
+msgid "A simple gui to generate and edit bibtex file."
+msgstr "সহজ সরল  bibtex সম্পাদক।"
+
+#. (itstool) path: item/p
+#: C/feature.page:27
+msgid "Search google scholar from the same interface(Search in google scholar webpage, not withstanding their terms of usage,in my knowledge)."
+msgstr "google scholar এ অনুসন্ধান করে (জ্ঞানত google ULA লঙ্ঘণ করে না।)"
+
+#. (itstool) path: item/p
+#: C/feature.page:32
+msgid "Include a complete bibtex entry."
+msgstr "একটি সম্পূর্ন bibtex entry যোগ কর।"
+
+#. (itstool) path: section/title
+#: C/feature.page:39
+msgid "Limitations"
+msgstr "সীমাবদ্ধতা"
+
+#. (itstool) path: item/p
+#: C/feature.page:42
+msgid "<app>BiBTeX</app> can be used with many format. The most popular (very small number of subset) of those format is tested."
+msgstr "<app>BiBTeX</app> এর প্রচুর  format আছে।  কেবল জনপ্রিয় format গুলোই পরিক্ষীত হয়েছে।"
+
+#. (itstool) path: section/title
+#: C/feature.page:49
+msgid "Acceptable Entry Type"
+msgstr "যে format গুলো পরিক্ষীত:"
+
+#. (itstool) path: section/p
+#: C/feature.page:50
+msgid "Below are two type of accpted and tested entry type"
+msgstr "নিচে দেওয়া format গুলো পরিক্ষীত"
+
+#. (itstool) path: section/code
+#: C/feature.page:51
+#, no-wrap
+msgid ""
+"\n"
+"      @article{RevModPhys.71.1253,\n"
+"      title = {Nobel Lecture: Electronic structure of \n"
+"      matter\\char22{}wave functions and density functionals},\n"
+"      author = {Kohn, W.},\n"
+"      journal = {Rev. Mod. Phys.},\n"
+"      volume = {71},\n"
+"      issue = {5},\n"
+"      pages = {1253--1266},\n"
+"      year = {1999},\n"
+"      publisher = {American Physical Society}\n"
+"      }\n"
+"    "
+msgstr ""
+
+#. (itstool) path: section/code
+#: C/feature.page:64
+#, no-wrap
+msgid ""
+"\n"
+"      @article{RevModPhys.71.1253,\n"
+"      title = \"Nobel Lecture: Electronic structure of \n"
+"      matter\\char22{}wave functions and density functionals\",\n"
+"      author = \"Kohn, W.\",\n"
+"      journal = \"Rev. Mod. Phys.\",\n"
+"      volume = \"71\",\n"
+"      issue = \"5\",\n"
+"      pages = \"1253--1266\",\n"
+"      year = \"1999\",\n"
+"      publisher = \"American Physical Society\"\n"
+"      }\n"
+"    "
+msgstr ""
+
+#. (itstool) path: section/p
+#: C/feature.page:77
+msgid "When a entry is made by putting value to each key as available in left pane, it will produce a entry shown below."
+msgstr "বামদিকের key ব্যবহার করে যখন  value দেওয়া হয়, Output নিচেরটার মতন হয়।"
+
+#. (itstool) path: info/desc
+#. (itstool) path: page/title
+#: C/google.page:17
+#: C/google.page:20
+msgid "Search <app>Google Scholar</app>"
+msgstr "<app>Google Scholar</app> এ সন্ধান"
+
+#. (itstool) path: page/p
+#: C/google.page:21
+msgid "Right from the left pane, user can \"Search Google Scholar\". Just enter <gui>Author</gui>, <gui>Title(As Keyword)</gui> and <gui>Year(Optional)</gui> and hit <gui style=\"button\">Search Google Scholar</gui>. The result will be shown in user's default web browser."
+msgstr "বামদিকের pane থেকেই  <app>Google Scholar</app> এ সন্ধান করা যাবে।  কেবল  <gui>Author</gui>, <gui>Title(As Keyword)</gui> এবং <gui>Year(Optional)</gui> ভর্তি করে <gui style=\"button\">Search Google Scholar</gui> কর।"
+
+#. (itstool) path: note/p
+#: C/google.page:23
+msgid "You can do better by turning bibtex link in google scholar setting \"on\""
+msgstr "google scholar setting এ  bibtex link \"on\" থাকলে আরও সুবিধা হবে।"
+
+#. (itstool) path: media
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.page:15
+msgctxt "_"
+msgid "external ref='images/mkbib.png' md5='938141fc07a08e63bd687a48be1ceaea'"
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/index.page:14
+msgid "<media type=\"image\" mime=\"image/png\" src=\"images/mkbib.png\"/> mkBiB Manual"
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/index.page:19
+msgid "Overview"
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/index.page:24
+msgid "Using <app>mkBiB</app>"
+msgstr "<app>mkBiB</app> এর ব্যবহার"
+
+#. (itstool) path: section/title
+#: C/index.page:28
+msgid "Common problems and solutions"
+msgstr "সাধারন সমস্যা আর তার সমাধান"
+
+#. (itstool) path: info/desc
+#: C/install.page:15
+msgid "Installing <app>mkBiB</app>: general and distro specific instruction."
+msgstr "বিভিন্ন লিনাক্স  distro'য় <app>mkBiB</app> ইনস্টল করার উপায়"
+
+#. (itstool) path: page/title
+#: C/install.page:18
+msgid "Installing <app>mkBiB</app>"
+msgstr "<app>mkBiB</app> ইনস্টল"
+
+#. (itstool) path: section/title
+#: C/install.page:20
+msgid "Download"
+msgstr "ডাউনলোড"
+
+#. (itstool) path: section/p
+#: C/install.page:21
+msgid "The most recent updated will always be available from <link href=\"http://download.savannah.gnu.org/releases/mkbib/\">SAVANNAH REPO</link>."
+msgstr "recent updated পাওয়া যাবে <link href=\"http://download.savannah.gnu.org/releases/mkbib/\">SAVANNAH REPO</link> থেকে।"
+
+#. (itstool) path: section/p
+#: C/install.page:24
+msgid "The stable version will be availavle from <link href=\"http://www.ctan.org/pkg/mkbib\">CTAN REPO</link>"
+msgstr "stable version পাওয়া যাবে <link href=\"http://www.ctan.org/pkg/mkbib\">CTAN REPO</link> থেকে।"
+
+#. (itstool) path: section/title
+#: C/install.page:31
+msgid "Required Packages"
+msgstr "প্রয়জনীয়  Packages"
+
+#. (itstool) path: item/p
+#: C/install.page:33
+msgid "GTK+-3"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/install.page:34
+msgid "libsoup"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/install.page:35
+msgid "intltool"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/install.page:36
+msgid "yelp-tools"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/install.page:37
+msgid "gnu-flex and bison"
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/install.page:41
+msgid "Instruction for specific distro"
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/install.page:43
+msgid "Fedora 18"
+msgstr ""
+
+#. (itstool) path: section/screen
+#: C/install.page:44
+#, no-wrap
+msgid ""
+"yum install libsoup-devel.x86_64 intltool\\ \n"
+"\tyelp-tools intltool gtk3-devel \\\n"
+"\tflex flex-devel bison"
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/install.page:49
+msgid "Arch"
+msgstr ""
+
+#. (itstool) path: note/p
+#: C/install.page:51
+msgid "Instruction for Arch and Ubuntu will be updated soon."
+msgstr "Arch আর Ubuntu ও তারাতারি-ই update করা হবে। "
+
+#. (itstool) path: media
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/interface.page:25
+#: C/new.page:24
+msgctxt "_"
+msgid "external ref='images/left_pane.png' md5='29ade0dcb6a049b9638c86b28fea5955'"
+msgstr ""
+
+#. (itstool) path: media
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/interface.page:48
+msgctxt "_"
+msgid "external ref='images/right_pane.png' md5='d13d161946a6a67e16171fcbc2a2c4ee'"
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/interface.page:15
+msgid "<app>mkBiB</app>'s Interface"
+msgstr ""
+
+#. (itstool) path: page/title
+#: C/interface.page:18
+msgid "<app>mkBiB</app> Interface"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/interface.page:19
+msgid "<app>mkBiB</app> is an editor and viewer of <app>BiBTeX</app> file. The left hand pane is the main editor, and the right hand pane is the main viewer."
+msgstr "<app>mkBiB</app> দিয়ে  <app>BiBTeX</app> ফাইল দেখা  ও সম্পাদনা করা যায়।  বামদিকের  pane টি মূলত  সম্পাদনার কাজে এবং ডানদিকের pane টি মূলত দেখার কাজে ব্যবহৃত হয়।"
+
+#. (itstool) path: section/title
+#: C/interface.page:21
+msgid "Left Pane"
+msgstr "বাম  Pane"
+
+#. (itstool) path: section/p
+#: C/interface.page:22
+msgid "This Left Pane is the main editing area of <app>mkBiB</app>"
+msgstr "বাম Pane এ  <app>mkBiB</app>এর  সম্পাদনা করা হয়।"
+
+#. (itstool) path: section/title
+#: C/interface.page:27
+msgid "<gui style=\"menuitem\">Menu Bar</gui>"
+msgstr ""
+
+#. (itstool) path: section/p
+#: C/interface.page:28
+msgid "<gui style=\"group\">Menu Bar</gui> contains standard <gui style=\"menu\">File</gui>, <gui style=\"menu\">Edit</gui> and <gui style=\"menu\">Help</gui>."
+msgstr "<gui style=\"menu\">File</gui>, <gui style=\"menu\">Edit</gui> and <gui style=\"menu\">Help</gui> গুলো <gui style=\"group\">Menu Bar</gui> এ আছে।"
+
+#. (itstool) path: section/p
+#: C/interface.page:31
+msgid "<gui style=\"menuitem\">File</gui> and <gui style=\"menuitem\">Help</gui> contains traditional <gui style=\"menuitem\">New</gui> , <gui style=\"menuitem\">Open</gui>, <gui style=\"menuitem\">Save</gui>, <gui style=\"menuitem\">Save As</gui> and <gui style=\"menuitem\">About</gui> and <gui style=\"menuitem\">Help</gui> item with their traditional keyboard-shortcuts as listed <code xref=\"keyboard-shortcuts\">here</code>."
+msgstr "<gui style=\"menuitem\">File</gui> আর <gui style=\"menuitem\">Help</gui> এর মধ্যে <gui style=\"menuitem\">New</gui> , <gui style=\"menuitem\">Open</gui>, <gui style=\"menuitem\">Save</gui>, <gui style=\"menuitem\">Save As</gui> আর <gui style=\"menuitem\">About</gui> এবং <gui style=\"menuitem\">Help</gui> আছে। এগুলো সাধারন   <code xref=\"keyboard-shortcuts\">keyboard-shortcuts</code>এর সাহায্যেও ব্যবহার করা যায়।"
+
+#. (itstool) path: section/title
+#: C/interface.page:36
+msgid "Entries"
+msgstr ""
+
+#. (itstool) path: section/p
+#: C/interface.page:37
+msgid "This part is used to create a single bibtex entry giving its value one by one. When finished, press <gui style=\"button\">Create</gui> button to create a single bibtex entry."
+msgstr "এটির সাহায্যে একটি একটি করে  bibtex বানানো যায়। বানানো হয়ে গেলে <gui style=\"button\">Create</gui> টিপে একটি entry তৈরি করতে হয়।"
+
+#. (itstool) path: note/p
+#: C/interface.page:39
+msgid "An entry can be generated using <keyseq><key>Alt</key><key>E</key></keyseq> or <guiseq><gui style=\"menu\">Edit</gui><gui style=\"menuitem\">Edit</gui></guiseq> which will open a empty editor to input a complete entry."
+msgstr "<keyseq><key>Alt</key><key>E</key></keyseq> বা <guiseq><gui style=\"menu\">Edit</gui><gui style=\"menuitem\">Edit</gui></guiseq> ব্যবহার করে একটি সম্পূর্ণ  entry একবারে বানানো যায়।"
+
+#. (itstool) path: section/title
+#: C/interface.page:46
+msgid "Right Pane"
+msgstr "ডান  Pane"
+
+#. (itstool) path: section/p
+#: C/interface.page:47
+msgid "Right Pane the viewer of the <gui>BiBTeX</gui> and the inline editor of visible columns."
+msgstr "ডান  Pane টিতে  <gui>BiBTeX</gui> দেখা যায় আর সম্পাদনা করা যায়।"
+
+#. (itstool) path: info/desc
+#: C/introduction.page:16
+msgid "What is <app>mkBiB</app>?"
+msgstr "<app>mkBiB</app> কি?"
+
+#. (itstool) path: page/title
+#: C/introduction.page:20
+msgid "Introduction"
+msgstr "অবতরনিকা"
+
+#. (itstool) path: page/p
+#: C/introduction.page:21
+msgid "<app>mkBiB</app> is a BibTeX manager. User can creat, manage and edit a new or existing bibtex file. User can enter each field separately or an complete entry."
+msgstr "<app>mkBiB</app> একটি  BibTeX manager।  এটির সাহায্য কোনো নতুন বা পুরানো bibtex ফাইল সম্পাদনা করা যায়।"
+
+#. (itstool) path: info/desc
+#: C/keyboard-shortcuts.page:18
+msgid "Use keyboard shortcuts to work with <app>mkBiB</app> more efficiently."
+msgstr "keyboard shortcuts এর সাহায্য <app>mkBiB</app> ব্যবহার আরও সহজ।"
+
+#. (itstool) path: page/title
+#: C/keyboard-shortcuts.page:22
+msgid "Keyboard shortcuts"
+msgstr ""
+
+#. (itstool) path: page/p
+#: C/keyboard-shortcuts.page:24
+msgid "Keyboard shortcuts are combinations of keys that you can use instead of navigating through the menu. The following shortcuts are available:"
+msgstr "মাউসের পরিবর্তে Keyboard shortcuts ব্যবহার করা যায়। নিম্নলিখিত shortcuts গুলি ব্যবহার করা যায়: "
+
+#. (itstool) path: table/title
+#: C/keyboard-shortcuts.page:28
+msgid "<gui style=\"guiitem\">File</gui>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:31
+#: C/keyboard-shortcuts.page:63
+#: C/keyboard-shortcuts.page:78
+msgid "Action"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:32
+#: C/keyboard-shortcuts.page:64
+#: C/keyboard-shortcuts.page:79
+msgid "Shortcut"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:37
+msgid "Open A New File"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:38
+msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:41
+msgid "Open An Existing File"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:42
+msgid "<keyseq><key>Ctrl</key><key>O</key></keyseq>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:45
+msgid "Save File"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:46
+msgid "<keyseq><key>Ctrl</key><key>S</key></keyseq>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:49
+msgid "Save As A New/Existing File"
+msgstr "নতুন/পুরানো ফাইল হিসাবে Save করুন"
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:50
+msgid "<keyseq><key>Shift</key><key>Ctrl</key><key>S</key></keyseq>"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:53
+msgid "Quit"
+msgstr "বন্ধ করুন"
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:54
+msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+msgstr ""
+
+#. (itstool) path: table/title
+#: C/keyboard-shortcuts.page:60
+msgid "Edit"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:69
+msgid "Enter A Full Entry"
+msgstr "পুরো  Entry দাও"
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:70
+msgid "<keyseq><key>Alt</key><key>E</key></keyseq>"
+msgstr ""
+
+#. (itstool) path: table/title
+#: C/keyboard-shortcuts.page:75
+msgid "Help"
+msgstr ""
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:84
+msgid "Help (This Guide)"
+msgstr "সাহায্য (এই পুস্তিকাটি)"
+
+#. (itstool) path: td/p
+#: C/keyboard-shortcuts.page:85
+msgid "<key>F1</key>"
+msgstr ""
+
+#. (itstool) path: p/link
+#: C/legal.xml:2
+msgid "GNU Free Documentation License"
+msgstr ""
+
+#. (itstool) path: license/p
+#: C/legal.xml:2
+msgid "Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts and no Back-Cover Texts. A copy of the license is available at <_:link-1/>"
+msgstr ""
+
+#. (itstool) path: media
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/new.page:30
+msgctxt "_"
+msgid "external ref='images/entry_pane.png' md5='7483948b8eb2922ce02d33a64a6f7acb'"
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/new.page:15
+msgid "Creating a new <app>BiBTeX</app> using <app>mkBiB</app>"
+msgstr "<app>mkBiB</app> ব্যবহার করে নতুন <app>BiBTeX</app> ফাইল বানান "
+
+#. (itstool) path: page/title
+#: C/new.page:18
+msgid "Creating a new <app>BiBTeX</app>"
+msgstr "নতুন <app>BiBTeX</app> বানান"
+
+#. (itstool) path: page/p
+#: C/new.page:19
+msgid "An antry can be created either by putting values to cell as described in <code xref=\"#new_cell\">New Cell</code> or a complete entry, as described in <code xref=\"#new_entry\">New Entry</code> below."
+msgstr ""
+
+#. (itstool) path: section/title
+#: C/new.page:21
+msgid "New Cell"
+msgstr "নতুন  Cell"
+
+#. (itstool) path: section/p
+#: C/new.page:22
+msgid "Entries are adden in the left pane. The <gui style=\"button\">Entry Type</gui> and <gui style=\"button\">bibkey</gui> is compulsury."
+msgstr "বাম pane এ Entries যোগ করা হয়।  <gui style=\"button\">Entry Type</gui> এবং <gui style=\"button\">bibkey</gui> দুটি আবশ্যিক।"
+
+#. (itstool) path: section/title
+#: C/new.page:27
+msgid "New Entry"
+msgstr "নতুন Entry"
+
+#. (itstool) path: section/p
+#: C/new.page:28
+msgid "A complete entry can be added using <guiseq><gui>Edit</gui><gui>Edit</gui></guiseq> Enter the entry in the pane opened, and click <gui style=\"button\">Create</gui> to create the entry."
+msgstr "<guiseq><gui>Edit</gui><gui>Edit</gui></guiseq> করে একটি সম্পূর্ণ Entry যোগ করা হয়।"
+
+#. (itstool) path: info/desc
+#: C/old.page:17
+msgid "Manageing an existing <app>BiBTeX</app> using <app>mkBiB</app>"
+msgstr "<app>mkBiB</app> এর সাহায্যে পুরানো  <app>BiBTeX</app> ফাইলে পরিবর্তন করা"
+
+#. (itstool) path: page/title
+#: C/old.page:20
+msgid "Manageing an existing <app>BiBTeX</app>"
+msgstr "পুরানো <app>BiBTeX</app> ফাইল সম্পাদনা"
+
+#. (itstool) path: page/p
+#: C/old.page:21
+msgid "Open an existing <app>BiBTeX</app> follows standard method of openning files i.e. <keyseq><key>Ctrl</key><key>O</key></keyseq> or <guiseq><gui>File</gui><gui>Open</gui></guiseq> in <gui style=\"menuitem\">menubar</gui>."
+msgstr "<keyseq><key>Ctrl</key><key>O</key></keyseq> বা <gui style=\"menuitem\">menubar</gui> এ<guiseq><gui>File</gui><gui>Open</gui></guiseq> করে পুরানো   <app>BiBTeX</app> ফাইলে পরিবর্তন করুন."
+
+#. (itstool) path: page/p
+#: C/old.page:24
+msgid "Manageing an existing <app>BiBTeX</app> file using <app>mkBiB</app> can be done in two way."
+msgstr "<app>mkBiB</app> এর সাহায্যে দুই ভাবে পুরানো   <app>BiBTeX</app> ফাইলে পরিবর্তন  করা যায়।"
+
+#. (itstool) path: section/title
+#: C/old.page:26
+msgid "Editing The View Pane"
+msgstr ""
+
+#. (itstool) path: section/p
+#: C/old.page:27
+msgid "All the elements visible in the right pane can be edited by double clicking on the corresponding cell."
+msgstr "ডান Pane এর  cell e double-click করে পরিবর্তন করা যায়।"
+
+#. (itstool) path: note/p
+#: C/old.page:31
+msgid "Only visible columns, i.e. 5 columns can be edited. For all other columns, you have to do it manually, using a Text Editor."
+msgstr "কেবল দৃশ্যমান column গুলির-ই (অর্থাৎ ৫ টি) এভাবে সম্পাদনা সম্ভব। অন্যগুলি কে সরাসরি ফাইলে করতে হবে।"
+
+#. (itstool) path: section/title
+#: C/old.page:35
+msgid "New Entry In Existing File"
+msgstr "পুরাতন ফাইলে নতুন Entry"
+
+#. (itstool) path: section/p
+#: C/old.page:36
+msgid "You can enter new entries in existing <app>BiBTeX</app> as described <code xref=\"new-file#new_cell\">here</code> or <code xref=\"new-file#new_entry\">here</code>."
+msgstr "পুরাতন ফাইলে নতুন Entry যোগ করতে  <code xref=\"new-file#new_cell\">here</code> or <code xref=\"new-file#new_entry\">এখানে</code> দেখ।"
+
+#. (itstool) path: page/title
+#: C/trouble.page:17
+msgid "Useful <app>BiBTeX</app> links"
+msgstr "জরুরী <app>BiBTeX</app> links "
+
+#. (itstool) path: item/title
+#: C/trouble.page:20
+msgid "<sys href=\"http://bibtex.org\">bibtex.org</sys>"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/trouble.page:21
+msgid "Here you will find everything you need to know about <app>BiBTeX</app>, or such the website clames."
+msgstr "Website তে <app>BiBTeX</app> সম্পর্কে যাবতীয় তথ্য পাওয়া যায়।"
+
+#. (itstool) path: item/title
+#: C/trouble.page:24
+msgid "<sys href=\"http://www.cs.stir.ac.uk/~kjt/software/latex/showbst.html\">Ken Turnet's page on <app>BiBTeX</app></sys>"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/trouble.page:25
+msgid "A collection of most used <app>BiBTeX</app> style's output. Very Helpful."
+msgstr "জনপ্রিয়  <app>BiBTeX</app> style এর output। দারুন কাজের।"
+

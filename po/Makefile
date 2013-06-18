@@ -17,7 +17,7 @@
 # We have the following line for use by intltoolize:
 # INTLTOOL_MAKEFILE
 
-GETTEXT_PACKAGE = @GETTEXT_PACKAGE@
+GETTEXT_PACKAGE = mkbib
 PACKAGE = mkbib
 VERSION = 2.1
 
@@ -66,6 +66,7 @@ DISTFILES = Makefile.in.in POTFILES.in $(POFILES)
 EXTRA_DISTFILES = ChangeLog POTFILES.skip Makevars LINGUAS
 
 POTFILES = \
+	../data/mkbib.desktop.in
 
 CATALOGS=$(shell LINGUAS="$(USE_LINGUAS)"; for lang in $$LINGUAS; do printf "$$lang.gmo "; done)
 

@@ -32,7 +32,7 @@ GtkWidget *window;
 void help_about (GtkMenuItem *helpabout, GtkWindow *window)
 {
   const gchar *auth[]={ "Rudra Banerjee <rudra.banerjee@aol.co.uk>", NULL };
-  const gchar trans[]={"Rudra Banerjee <rudra.banerjee@aol.co.uk>"};
+  const gchar trans[]={"Kathakali Banerjee <bnrj.kathakali@hotmail.co.uk>"};
   gchar *hstr=g_strdup_printf("%s/mkbib.svg", PIXMAP);
   GdkPixbuf *pixbuf = gdk_pixbuf_new_from_file(hstr, NULL);
 

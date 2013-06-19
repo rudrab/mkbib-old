@@ -72,8 +72,8 @@ void activate_func(GtkWidget *widget, gpointer data) {
   else{
     gtk_list_store_append(store, &siter);
     gtk_list_store_set(store, &siter,
-	COL_BIB_KEY, 		strings[0],
-	COL_BIB_TYPE, 		strings[1],
+	COL_BIB_TYPE, 		strings[0],
+	COL_BIB_KEY, 		strings[1],
 	COL_BIB_AUTHOR, 	strings[2],
 	COL_BIB_YEAR, 		strings[12],
 	COL_BIB_TITLE, 		strings[4],
